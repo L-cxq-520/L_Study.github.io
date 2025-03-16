@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="Mathf数学计算类常用方法3D数学-Mathf数学计算公共类 Mathf和Math:  Math是C#中封装好的用于数学计算的工具类，位于System命名空间中。 Mathf是Unity中封装好的用于数学计算的工具结构体，位于UnityEngine命名空间中。 他们都是提供来用于进行数学相关计算的。  Mathf和Math的区别:  Mathf 和 Math中的相关方法几乎一样。 Math -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity基础">
+<meta property="og:url" content="https://l-cxq-520.github.io/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Mathf数学计算类常用方法3D数学-Mathf数学计算公共类 Mathf和Math:  Math是C#中封装好的用于数学计算的工具类，位于System命名空间中。 Mathf是Unity中封装好的用于数学计算的工具结构体，位于UnityEngine命名空间中。 他们都是提供来用于进行数学相关计算的。  Mathf和Math的区别:  Mathf 和 Math中的相关方法几乎一样。 Math -">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-03-14T14:57:36.000Z">
+<meta property="article:modified_time" content="2025-03-15T14:46:53.624Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="游戏引擎">
+<meta name="twitter:card" content="summary">
+
+
+<title >Unity基础</title>
+
+<!-- Favicon -->
+
+    <link href='/L_Study.github.io/img/favicon.svg?v=2.2.4' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/L_Study.github.io/img/favicon.svg?v=2.2.4' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/L_Study.github.io/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/L_Study.github.io/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"l-cxq-520.github.io","author":"John Doe","root":"/L_Study.github.io/","typed_text":["Web Developer"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":false},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-03-15 22:46:53"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/L_Study.github.io/css/index.css?v=2.2.4" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+
+ 
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/L_Study.github.io/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/L_Study.github.io/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            Unity<span>Study</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/L_Study.github.io/" target="">
+                    首页
+                </a>
+                
+                <ul>
+                    
+                    <li>
+                        <a  href="/L_Study.github.io/archives2/" target="">
+                            archives2
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/L_Study.github.io/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/L_Study.github.io/categories/" target="">
+                    分类
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/L_Study.github.io/tags/" target="">
+                    标签
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/L_Study.github.io/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            Unity基础
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/L_Study.github.io/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2025
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/L_Study.github.io/img/Icon.JPG">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        L
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:admin@imalun.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            03/14
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            22:57
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            John Doe
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="Mathf数学计算类常用方法"><a href="#Mathf数学计算类常用方法" class="headerlink" title="Mathf数学计算类常用方法"></a>Mathf数学计算类常用方法</h1><p><code>3D数学-Mathf数学计算公共类</code></p>
+<p><strong><font size="4">Mathf和Math:</font></strong></p>
+<ul>
+<li>Math是C#中封装好的用于数学计算的工具类，位于System命名空间中。</li>
+<li>Mathf是Unity中封装好的用于数学计算的工具结构体，位于UnityEngine命名空间中。</li>
+<li>他们都是提供来用于进行数学相关计算的。</li>
+</ul>
+<p><strong><font size="4">Mathf和Math的区别:</font></strong></p>
+<ul>
+<li>Mathf 和 Math中的相关方法几乎一样。</li>
+<li>Math - C#自带数学库，提供基本的数学计算方法。</li>
+<li>Mathf - Unity专门针对游戏开发增强的数学库，包含了Math中的方法，并添加了一些适用于游戏开发的方法。</li>
+</ul>
+<p><strong><font size="4">Mathf中的常用方法——(一般计算一次):</font></strong></p>
+<p><strong><font size="3">PI常量:获取圆周率π</font></strong> </p>
+<ul>
+<li>众所周知的”3.14159265358979…”值（只读）。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">   </span><br><span class="line">    print(Mathf.PI);<span class="comment">//3.141593</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Abs静态方法:取绝对值</font></strong></p>
+<ul>
+<li>返回 f 的绝对值。</li>
+</ul>
+<blockquote>
+<p>绝对值表示一个数不考虑其正负符号的大小。<br>例如, -5 的绝对值是5,而 5 的绝对值也是 5。</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">start</span>()</span></span><br><span class="line">&#123; </span><br><span class="line">    print(Mathf.Abs(<span class="number">-10</span>));<span class="comment">//10</span></span><br><span class="line">    print(Mathf.Abs(<span class="number">-20</span>));<span class="comment">//20</span></span><br><span class="line">    print(Mathf.Abs(<span class="number">1</span>));<span class="comment">//1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="3">CeilToInt静态方法:向上取整</font></strong></p>
+<ul>
+<li>返回大于或等于 f 的最小整数。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">float</span> f = <span class="number">1.3f</span>;</span><br><span class="line">    <span class="built_in">int</span> i = (<span class="built_in">int</span>)f;</span><br><span class="line">    print(i);<span class="comment">//1</span></span><br><span class="line">    print(Mathf.CeilToInt(f));<span class="comment">//2</span></span><br><span class="line">    print(Mathf.CeilToInt(<span class="number">1.00001f</span>));<span class="comment">//2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">FloorToInt静态方法:向下取整</font></strong></p>
+<ul>
+<li>返回小于或等于 f 的最大整数。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">   </span><br><span class="line">    print(Mathf.FloorToInt(<span class="number">9.6f</span>));<span class="comment">//9</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Clamp静态方法:钳制函数</font></strong></p>
+<ul>
+<li>在给定的最小浮点值和最大浮点值之间钳制给定值。如果在最小和最大范围内，则返回给定值。</li>
+<li>比最小还小，就取最小，比最大还大，就取最大，两者之间，就取本身</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    print(Mathf.Clamp(<span class="number">10</span>, <span class="number">11</span>, <span class="number">20</span>));<span class="comment">//11</span></span><br><span class="line">    print(Mathf.Clamp(<span class="number">21</span>, <span class="number">11</span>, <span class="number">20</span>));<span class="comment">//20</span></span><br><span class="line">    print(Mathf.Clamp(<span class="number">15</span>, <span class="number">11</span>, <span class="number">20</span>));<span class="comment">//15</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="3">Max静态方法:获取最大值</font></strong></p>
+<ul>
+<li>返回两个或更多值中的最大值。</li>
+<li>内部有一个可变长的参数</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    print(Mathf.Max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>));<span class="comment">//8</span></span><br><span class="line">    print(Mathf.Max(<span class="number">1</span>, <span class="number">2</span>));<span class="comment">//2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Min静态方法:获取最小值</font></strong></p>
+<ul>
+<li>返回两个或更多值中的最小值。</li>
+<li>内部有一个可变长的参数</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    print(Mathf.Min(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">545</span>, <span class="number">6</span>, <span class="number">1123</span>, <span class="number">123</span>));<span class="comment">//1</span></span><br><span class="line">    print(Mathf.Min(<span class="number">1.1f</span>, <span class="number">0.4f</span>));<span class="comment">//0.4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="3">Pow静态方法:一个数的n次幂</font></strong></p>
+<ul>
+<li>返回 f 的 p 次幂。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">        </span><br><span class="line">    print(<span class="string">&quot;一个数的n次方&quot;</span> + Mathf.Pow(<span class="number">4</span>, <span class="number">2</span>));<span class="comment">//16</span></span><br><span class="line">    print(<span class="string">&quot;一个数的n次方&quot;</span> + Mathf.Pow(<span class="number">2</span>, <span class="number">3</span>));<span class="comment">//8</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">RoundToInt静态方法:四舍五入</font></strong></p>
+<ul>
+<li>返回舍入为最近整数的&#x2F; f &#x2F;。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    print(<span class="string">&quot;四舍五入&quot;</span>+Mathf.RoundToInt(<span class="number">1.3f</span>));<span class="comment">//1</span></span><br><span class="line">    print(<span class="string">&quot;四舍五入&quot;</span>+Mathf.RoundToInt(<span class="number">1.5f</span>));<span class="comment">//2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Sqrt静态方法:返回一个数的平方根</font></strong></p>
+<ul>
+<li>返回 f 的平方根。</li>
+</ul>
+<blockquote>
+<p>平方根概念:如果一个数的平方等于另一个数，那么这个数叫做另一个数的平方根或二次方根</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    print(<span class="string">&quot;返回一个数的平方根&quot;</span> + Mathf.Sqrt(<span class="number">4</span>));<span class="comment">//2</span></span><br><span class="line">    print(<span class="string">&quot;返回一个数的平方根&quot;</span> + Mathf.Sqrt(<span class="number">16</span>));<span class="comment">//4</span></span><br><span class="line">    print(<span class="string">&quot;返回一个数的平方根&quot;</span> + Mathf.Sqrt(<span class="number">64</span>));<span class="comment">//8</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">IsPowerOfTwo静态方法:判断一个数是否是2的n次方</font></strong></p>
+<ul>
+<li> 如果值是 2的幂,则返回 true</li>
+</ul>
+<blockquote>
+<p>2的幂次方数是指2的n次方的数,其中n为非负整数</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    print(<span class="string">&quot;判断一个数是否是2的n次方&quot;</span> + Mathf.IsPowerOfTwo(<span class="number">4</span>));<span class="comment">//true</span></span><br><span class="line">    print(<span class="string">&quot;判断一个数是否是2的n次方&quot;</span> + Mathf.IsPowerOfTwo(<span class="number">8</span>));<span class="comment">//true</span></span><br><span class="line">    print(<span class="string">&quot;判断一个数是否是2的n次方&quot;</span> + Mathf.IsPowerOfTwo(<span class="number">3</span>));<span class="comment">//false</span></span><br><span class="line">    print(<span class="string">&quot;判断一个数是否是2的n次方&quot;</span> + Mathf.IsPowerOfTwo(<span class="number">1</span>));<span class="comment">//true</span></span><br><span class="line">    print(<span class="string">&quot;判断一个数是否是2的n次方&quot;</span> + Mathf.IsPowerOfTwo(<span class="number">10</span>));<span class="comment">//false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="3">Sign静态方法:判断正负数</font></strong></p>
+<ul>
+<li>返回 f 的符号。</li>
+<li>正数和0就返回1，负数就返回-1</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    print(<span class="string">&quot;判断正负数&quot;</span> + Mathf.Sign(<span class="number">0</span>));<span class="comment">//1</span></span><br><span class="line">    print(<span class="string">&quot;判断正负数&quot;</span> + Mathf.Sign(<span class="number">10</span>));<span class="comment">//1</span></span><br><span class="line">    print(<span class="string">&quot;判断正负数&quot;</span> + Mathf.Sign(<span class="number">-10</span>));<span class="comment">//-1</span></span><br><span class="line">    print(<span class="string">&quot;判断正负数&quot;</span> + Mathf.Sign(<span class="number">3</span>));<span class="comment">//1</span></span><br><span class="line">    print(<span class="string">&quot;判断正负数&quot;</span> + Mathf.Sign(<span class="number">-2</span>));<span class="comment">//-1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="4">Mathf中的常用方法——(一般不停计算)</font></strong></p>
+<p><strong><font size="3">Lerp静态方法:插值运算</font></strong></p>
+<ul>
+<li>用于执行线性插值运算。线性插值是一种基本的数学运算，用于在两个值之间进行平滑的过渡。在游戏开发中，它通常用于在两个状态之间进行平滑过渡，例如在动画中对象的位置、旋转或颜色之间进行插值以实现平滑的动画效果。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">float</span> <span class="title">Lerp</span>(<span class="params"><span class="built_in">float</span> a, <span class="built_in">float</span> b, <span class="built_in">float</span> t</span>)</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>a：起始值。</li>
+<li>b：目标值。</li>
+<li>t：插值参数，通常介于0和1之间。当t为0时，返回起始值a；当t为1时，返回目标值b；当t在0和1之间时，返回起始值a和目标值b之间的插值。</li>
+<li>Lerp函数插值的计算方式是通过如下公式来实现的：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result = a + (b - a) * t</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这个公式实际上是线性插值的定义：它从起始值a开始，根据参数t与目标值b之间的差异，按比例插值到目标值。当t为0时，插值结果等于起始值a；当t为1时，插值结果等于目标值b；当t在0和1之间时，插值结果在起始值a和目标值b之间进行平滑过渡。</li>
+</ul>
+<p><strong><font size="3">插值运算用法一：</font></strong></p>
+<ul>
+<li>先快后慢，无限接近终点</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> start=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">float</span> end=<span class="number">10</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//每帧改变start的值——变化速度先快后慢，位置无限接近，但是不会得到end位置</span></span><br><span class="line">    <span class="comment">//可以理解为 每一帧的时间不变 计算出来的下一帧的位置肯定会更大</span></span><br><span class="line">    <span class="comment">//但是因为下一帧的位置更大 (end - start)就会变小 每一帧的位置移动相比起来就更小了</span></span><br><span class="line">    start = Mathf.Lerp(start, end, Time.deltaTime);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">插值运算用法二：</font></strong></p>
+<ul>
+<li>匀速接近终点</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> start =<span class="number">0</span>;<span class="comment">//开始值</span></span><br><span class="line"><span class="built_in">float</span> end =<span class="number">10</span>;<span class="comment">//结束值</span></span><br><span class="line"><span class="built_in">float</span> result =<span class="number">0</span>;<span class="comment">//结果值</span></span><br><span class="line"><span class="built_in">float</span> time =<span class="number">0</span>;<span class="comment">//变化时间</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//每帧改变t的值——变化速度匀速，位置每帧接近，当t&gt;=1时，得到结果</span></span><br><span class="line">    <span class="comment">//当time大于1时，插值会继续进行，但是Mathf.Lerp方法返回的结果将始终等于end，因为此时参数t等于1，即线性插值的终点。</span></span><br><span class="line">    <span class="comment">//因此，当time大于1时，result将保持等于end，不再发生变化。</span></span><br><span class="line">    <span class="comment">//可以理解为 start和end都不变 只有t在每一帧都在累加一个恒定值</span></span><br><span class="line">    <span class="comment">//比如第一帧t是0.1秒 第二帧就是0.2秒 第五帧t就是0.5秒了</span></span><br><span class="line">    <span class="comment">//这样算出来没帧的结果就是接近线性的</span></span><br><span class="line">    time += Time.deltaTime;</span><br><span class="line">    result = Mathf.Lerp(start, end, time);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p><strong><font size="4">1.使用线性插值实现一个方块跟随另一个方块移动</font></strong></p>
+<hr>
+<h1 id="Mathf数学计算类三角函数"><a href="#Mathf数学计算类三角函数" class="headerlink" title="Mathf数学计算类三角函数"></a>Mathf数学计算类三角函数</h1><p><strong><font size="4">学习内容：</font></strong></p>
+<ul>
+<li>1.角度和弧度</li>
+<li>2.三角函数</li>
+<li>3.三角函数曲线</li>
+<li>4.反三角函数</li>
+</ul>
+<p><strong><font size="4">角度和弧度：</font></strong></p>
+<ul>
+<li>角度和弧度都是度量角的单位</li>
+<li>角度：1°</li>
+<li>弧度：1 radian</li>
+<li>圆一周的角度：360°</li>
+<li>圆一周的弧度：2Π radian</li>
+</ul>
+<p><strong><font size="3">角度和弧度的转换关系：</font></strong></p>
+<ul>
+<li>Π rad&#x3D;180°</li>
+<li>1 ran&#x3D;(180&#x2F;Π)°&#x3D;&gt; 1 rad &#x3D;180&#x2F;3.15≈57.3°</li>
+<li>1° &#x3D;(Π&#x2F;180) rad &#x3D;&gt; 1°&#x3D;3.14&#x2F;180≈0.01745 rad</li>
+<li>由此可以得出</li>
+<li>弧度*57.3&#x3D;对应角度</li>
+<li>角度*0.01745&#x3D;对应弧度</li>
+</ul>
+<p><strong><font size="4">Unity中的弧度，角度互相转换：</font></strong><br><strong><font size="3">Rad2Deg常量:</font></strong></p>
+<ul>
+<li>弧度转角度的常量</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 弧度到度换算常量（只读）。</span></span><br><span class="line">    <span class="built_in">float</span> rad = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">float</span> anger = rad * Mathf.Rad2Deg;</span><br><span class="line">    print(anger);<span class="comment">//57.29578f;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Deg2Rad常量 :</font></strong></p>
+<ul>
+<li>角度转弧度的常量</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 度到弧度换算常量（只读）。</span></span><br><span class="line">    anger = <span class="number">1</span>;</span><br><span class="line">    rad = anger * Mathf.Deg2Rad;</span><br><span class="line">    print(rad);<span class="comment">//0.01745329</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="4">三角函数：</font></strong></p>
+<ul>
+<li>三角函数是初等函数之一</li>
+<li>包括正弦函数，余弦函数，正切函数等</li>
+<li>下面回顾正弦函数和余弦函数</li>
+</ul>
+<p><strong><font size="3">正弦函数：</font></strong></p>
+<p><strong><font size="3">余弦函数：</font></strong></p>
+<p><strong><font size="4">Unity中的三角函数：</font></strong></p>
+<ul>
+<li>注意：Mathf中的三角函数相关的函数，传入的参数需要是弧度值</li>
+</ul>
+<p><strong><font size="3">Sin静态方法：计算正弦函数</font></strong></p>
+<ul>
+<li>返回角度 f 的正弦。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    print(Mathf.Sin(<span class="number">30</span> * Mathf.Deg2Rad));<span class="comment">//0.5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Cos静态方法：计算余弦函数</font></strong></p>
+<ul>
+<li>返回角度 f 的余弦。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    print(Mathf.Cos(<span class="number">60</span> * Mathf.Deg2Rad));<span class="comment">//0.5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/L_Study.github.io/2025/03/14/Unity%E6%A0%B8%E5%BF%83/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/L_Study.github.io/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /L_Study.github.io/categories/Unity/">
+                    Unity
+                </a>
+            </div>
+            <h5>
+                <a href="/L_Study.github.io/2025/03/14/Unity%E6%A0%B8%E5%BF%83/" class="trm-anima-link">
+                    Unity核心
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>25/03/14</li>
+                <li>22:57</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/L_Study.github.io/2025/03/14/Unity%E5%85%A5%E9%97%A8/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/L_Study.github.io/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /L_Study.github.io/categories/Unity/">
+                    Unity
+                </a>
+            </div>
+            <h5>
+                <a href="/L_Study.github.io/2025/03/14/Unity%E5%85%A5%E9%97%A8/" class="trm-anima-link">
+                    Unity入门
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>25/03/14</li>
+                <li>22:57</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.4
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类常用方法"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类常用方法"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Mathf数学计算类常用方法</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类三角函数"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类三角函数"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">Mathf数学计算类三角函数</span></a></li></ol>
+      </div>
+    </div>
+
+            
+<div class="trm-fixed-container">
+    
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn hidden-md" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
+            <i class="iconfont fas fa-arrows-alt-h"></i>
+        </div>
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/L_Study.github.io/js/plugins/typing.js?v=2.2.4"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/L_Study.github.io/js/main.js?v=2.2.4"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+</body>
+
+</html>
