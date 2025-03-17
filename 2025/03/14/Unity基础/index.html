@@ -14,11 +14,19 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Mathf数学计算类常用方法3D数学-Mathf数学计算公共类 Mathf和Math:  Math是C#中封装好的用于数学计算的工具类，位于System命名空间中。 Mathf是Unity中封装好的用于数学计算的工具结构体，位于UnityEngine命名空间中。 他们都是提供来用于进行数学相关计算的。  Mathf和Math的区别:  Mathf 和 Math中的相关方法几乎一样。 Math -">
 <meta property="og:locale">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
 <meta property="article:published_time" content="2025-03-14T14:57:36.000Z">
-<meta property="article:modified_time" content="2025-03-15T14:46:53.624Z">
+<meta property="article:modified_time" content="2025-03-17T13:56:50.358Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="游戏引擎">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
 
 
 <title >Unity基础</title>
@@ -60,7 +68,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"l-cxq-520.github.io","author":"John Doe","root":"/L_Study.github.io/","typed_text":["Web Developer"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":false},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-03-15 22:46:53"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-03-17 21:56:50"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/L_Study.github.io/css/index.css?v=2.2.4" id="trm-switch-style">
@@ -477,6 +485,44 @@
 </ul>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> start =<span class="number">0</span>;<span class="comment">//开始值</span></span><br><span class="line"><span class="built_in">float</span> end =<span class="number">10</span>;<span class="comment">//结束值</span></span><br><span class="line"><span class="built_in">float</span> result =<span class="number">0</span>;<span class="comment">//结果值</span></span><br><span class="line"><span class="built_in">float</span> time =<span class="number">0</span>;<span class="comment">//变化时间</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//每帧改变t的值——变化速度匀速，位置每帧接近，当t&gt;=1时，得到结果</span></span><br><span class="line">    <span class="comment">//当time大于1时，插值会继续进行，但是Mathf.Lerp方法返回的结果将始终等于end，因为此时参数t等于1，即线性插值的终点。</span></span><br><span class="line">    <span class="comment">//因此，当time大于1时，result将保持等于end，不再发生变化。</span></span><br><span class="line">    <span class="comment">//可以理解为 start和end都不变 只有t在每一帧都在累加一个恒定值</span></span><br><span class="line">    <span class="comment">//比如第一帧t是0.1秒 第二帧就是0.2秒 第五帧t就是0.5秒了</span></span><br><span class="line">    <span class="comment">//这样算出来没帧的结果就是接近线性的</span></span><br><span class="line">    time += Time.deltaTime;</span><br><span class="line">    result = Mathf.Lerp(start, end, time);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><p><strong><font size="4">1.使用线性插值实现一个方块跟随另一个方块移动</font></strong></p>
+<details>
+  <summary>查看答案</summary>
+
+<p><strong><font size="3">场景设置:</font></strong></p>
+<ul>
+<li>在场景中创建两个方块A和B，目的是让方块A跟随方块B移动。</li>
+</ul>
+<p><strong><font size="3">创建脚本并编写:</font></strong></p>
+<ul>
+<li>创建一个脚本，将其挂载到方块A上。在脚本中添加必要的变量，包括要跟随的对象B、移动速度等。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>  <span class="keyword">class</span> <span class="title">TestMove</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">     <span class="comment">//要跟随的对象B</span></span><br><span class="line">    <span class="keyword">public</span> Transform B;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//移动速度</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> moveSpeed;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//位置中介</span></span><br><span class="line">    <span class="keyword">private</span> Vector3 pos;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//B当前的位置</span></span><br><span class="line">    <span class="keyword">private</span> Vector3 bNowPos;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//开始位置</span></span><br><span class="line">    <span class="keyword">private</span> Vector3 startPos;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//匀速运动累加的时间</span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> time;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//模式</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">int</span> mode = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="3">切换逻辑:</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>  <span class="keyword">class</span> <span class="title">TestMove</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnGUI</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(GUI.Button(<span class="keyword">new</span> Rect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">200</span>), <span class="string">&quot;切换模式&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(mode == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                mode = <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(mode == <span class="number">2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                mode = <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">根据不同模式进行移动:</font></strong></p>
+<ul>
+<li>在Update函数中根据不同的模式进行移动处理。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span>  <span class="keyword">class</span> <span class="title">TestMove</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(mode == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//第一种：先快后慢的形式</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//记录当前这一帧A的位置</span></span><br><span class="line">            pos = <span class="keyword">this</span>.transform.position;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//传入这一帧A的位置算出下一帧A的位置</span></span><br><span class="line">            pos.x = Mathf.Lerp(pos.x, B.position.x, Time.deltaTime * moveSpeed);</span><br><span class="line">            pos.y = Mathf.Lerp(pos.y, B.position.y, Time.deltaTime * moveSpeed);</span><br><span class="line">            pos.z = Mathf.Lerp(pos.z, B.position.z, Time.deltaTime * moveSpeed);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//算出下一帧A的位置赋值给A</span></span><br><span class="line">            <span class="keyword">this</span>.transform.position = pos;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(mode == <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//第二种：匀速运动</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">//发现存储的B的位置不等于当前B的位置</span></span><br><span class="line">            <span class="keyword">if</span> (bNowPos != B.transform.position)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//清空时间，重写设置B的位置，开始位置是A当前的位置</span></span><br><span class="line">                time = <span class="number">0</span>;</span><br><span class="line">                bNowPos = B.transform.position;</span><br><span class="line">                startPos = <span class="keyword">this</span>.transform.position;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//时间每一帧运算累加</span></span><br><span class="line">            time += Time.deltaTime;</span><br><span class="line"></span><br><span class="line">            <span class="comment">//startPos和bNowPos其实定死了，只有time在变化，传入算出下一帧A的位置</span></span><br><span class="line">            pos.x = Mathf.Lerp(startPos.x, bNowPos.x, time * moveSpeed);</span><br><span class="line">            pos.y = Mathf.Lerp(startPos.y, bNowPos.y, time * moveSpeed);</span><br><span class="line">            pos.z = Mathf.Lerp(startPos.z, bNowPos.z, time * moveSpeed);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//算出下一帧A的位置赋值给A</span></span><br><span class="line">            <span class="keyword">this</span>.transform.position = pos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">运行效果:</font></strong></p>
+<ul>
+<li>第一种：先快后慢的形式</li>
+</ul>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/Mathf%E7%BB%83%E4%B9%A0_%E5%85%88%E5%BF%AB%E5%90%8E%E6%85%A2.gif" class="" title="先快后慢"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+<ul>
+<li>第二种：匀速运动</li>
+</ul>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/Mathf%E7%BB%83%E4%B9%A0_%E5%8C%80%E9%80%9F%E8%BF%90%E5%8A%A8.gif" class="" title="匀速运动"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+</details>
+
+
+
+
+
+
 <hr>
 <h1 id="Mathf数学计算类三角函数"><a href="#Mathf数学计算类三角函数" class="headerlink" title="Mathf数学计算类三角函数"></a>Mathf数学计算类三角函数</h1><p><strong><font size="4">学习内容：</font></strong></p>
 <ul>
@@ -519,8 +565,58 @@
 <li>包括正弦函数，余弦函数，正切函数等</li>
 <li>下面回顾正弦函数和余弦函数</li>
 </ul>
-<p><strong><font size="3">正弦函数：</font></strong></p>
-<p><strong><font size="3">余弦函数：</font></strong></p>
+<p><strong><font size="4">正弦函数（sin）：</font></strong></p>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E6%AD%A3%E5%BC%A6%E5%87%BD%E6%95%B0.png" class="" title="正弦函数"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+<p><strong><font size="4">余弦函数（cos）：</font></strong></p>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E4%BD%99%E5%BC%A6%E5%87%BD%E6%95%B0.png" class="" title="余弦函数"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+
+
+<p><strong><font size="4">三角函数曲线:</font></strong><br><strong><font size="3">正弦函数(sin)曲线:</font></strong></p>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E6%AD%A3%E5%BC%A6%E5%87%BD%E6%95%B0%E6%9B%B2%E7%BA%BF.png" class="" title="正弦函数曲线"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+<p><strong><font size="3">余弦函数(cos)曲线:</font></strong></p>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E4%BD%99%E5%BC%A6%E5%87%BD%E6%95%B0%E6%9B%B2%E7%BA%BF.png" class="" title="余弦函数曲线"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+<p><strong><font size="4">常用特殊度数正弦余弦值:</font></strong></p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>0</th>
+<th>30</th>
+<th>45</th>
+<th>60</th>
+<th>90</th>
+<th>180</th>
+<th>270</th>
+<th>360</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sin</td>
+<td>0</td>
+<td>1&#x2F;2</td>
+<td>√2&#x2F;2</td>
+<td>√3&#x2F;2</td>
+<td>1</td>
+<td>0</td>
+<td>-1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Cos</td>
+<td>1</td>
+<td>√3&#x2F;2</td>
+<td>√2&#x2F;2</td>
+<td>1&#x2F;2</td>
+<td>0</td>
+<td>-1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
 <p><strong><font size="4">Unity中的三角函数：</font></strong></p>
 <ul>
 <li>注意：Mathf中的三角函数相关的函数，传入的参数需要是弧度值</li>
@@ -536,8 +632,42 @@
 </ul>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    print(Mathf.Cos(<span class="number">60</span> * Mathf.Deg2Rad));<span class="comment">//0.5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><strong><font size="4">反三角函数:</font></strong></p>
+<ul>
+<li>反三角函数是初等函数之一</li>
+<li>包括反正弦函数、反余弦函数等</li>
+<li>作用：通过反三角函数计算正弦值或余弦值对应的弧度值</li>
+<li>弧度&#x3D;Mathf.Asin（正弦值）</li>
+<li>弧度&#x3D;Mathf.Acos（余弦值）</li>
+<li>注意：Unity提供的数学计算使用的是弧度制</li>
+</ul>
+<p><strong><font size="4">Unity中的反三角函数:</font></strong></p>
+<ul>
+<li>注意：反三角函数得到的结果是 正弦或者余弦值对应的弧度</li>
+</ul>
+<p><strong><font size="3">Asin静态方法:反正弦函数</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 返回 f 的反正弦 - 其正弦为 f 的角度（以弧度为单位）。</span></span><br><span class="line">    <span class="built_in">float</span> rad = Mathf.Asin(<span class="number">0.5f</span>);</span><br><span class="line">    print(rad * Mathf.Rad2Deg);<span class="comment">//30</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Acoc静态方法:反余弦函数</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 返回 f 的反余弦 - 其余弦为 f 的角度（以弧度为单位）。</span></span><br><span class="line">    <span class="built_in">float</span> rad = Mathf.Acos(<span class="number">0.5f</span>);</span><br><span class="line">    print(rad * Mathf.Rad2Deg);<span class="comment">//60</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>1.三角函数—— Mathf.Sin（弧度）、Mathf.Cos（弧度）</li>
+<li>2.角度和弧度—— Mathf.Rad2Deg、Mathf.Deg2Rad</li>
+<li>3.三角函数曲线—— Sin和Cos函数曲线对于我们的意义</li>
+<li>4.反三角函数——Mathf.Asin（正弦值）、Mathf.Acos（余弦值）</li>
+</ul>
+<h2 id="练习题-1"><a href="#练习题-1" class="headerlink" title="练习题"></a>练习题</h2><p><strong><font size="4">1.实现物体按曲线移动（正弦或余弦曲线）</font></strong></p>
+<details>
+  <summary>查看答案</summary>
 
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">创建脚本并创建移动相关参数:</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestScript</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 面朝向移动速度</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> moveSpeed = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 左右曲线移动变化的速度</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> changeSpeed = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 左右曲线移动距离控制</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> changeSize = <span class="number">10f</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 时间</span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">float</span> time = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Update函数中写移动逻辑函数</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestScript</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// x轴移动</span></span><br><span class="line">        <span class="keyword">this</span>.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime); <span class="comment">// moveSpeed控制x轴移动速度快慢</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// y轴移动</span></span><br><span class="line">        time += Time.deltaTime * changeSpeed; <span class="comment">// changeSpeed控制每一帧累加多少时间，时间最终传进去Sin函数中</span></span><br><span class="line">        <span class="keyword">this</span>.transform.Translate(Vector3.up * changeSize * Time.deltaTime * Mathf.Sin(time)); <span class="comment">// changeSize控制三角函数里的最值 </span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">运行效果:</font></strong></p>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0%E7%BB%83%E4%B9%A0_%E6%9B%B2%E7%BA%BF%E7%A7%BB%E5%8A%A8.gif" class="" title="曲线移动"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+<p>  </p>
+</details>
+
 </article>
     
     
@@ -667,7 +797,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类常用方法"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类常用方法"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Mathf数学计算类常用方法</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类三角函数"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类三角函数"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">Mathf数学计算类三角函数</span></a></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类常用方法"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类常用方法"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Mathf数学计算类常用方法</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类三角函数"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类三角函数"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">Mathf数学计算类三角函数</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="总结"><a rel="nofollow" class="trm-toc-link" href="#总结"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">总结</span></a></li><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题-1"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li></ol>
       </div>
     </div>
 
