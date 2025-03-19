@@ -37,8 +37,13 @@
 <meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
 <meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
 <meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
+<meta property="og:image" content="https://l-cxq-520.github.io/L_Study.github.io/img/404.jpg">
 <meta property="article:published_time" content="2025-03-14T14:57:36.000Z">
-<meta property="article:modified_time" content="2025-03-18T14:40:31.151Z">
+<meta property="article:modified_time" content="2025-03-19T14:13:10.579Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="游戏引擎">
 <meta name="twitter:card" content="summary">
@@ -84,7 +89,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"l-cxq-520.github.io","author":"John Doe","root":"/L_Study.github.io/","typed_text":["Web Developer"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":false},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-03-18 22:40:31"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-03-19 22:13:10"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/L_Study.github.io/css/index.css?v=2.2.4" id="trm-switch-style">
@@ -1165,14 +1170,157 @@
 
 </details>
 
+
 <h1 id="Vector3向量点乘"><a href="#Vector3向量点乘" class="headerlink" title="Vector3向量点乘"></a>Vector3向量点乘</h1><p><code>3D数学-Vector3向量-向量点乘</code></p>
-<p><strong><font size="4">学习内容:</font></strong></p>
+<h2 id="向量点乘-详解"><a href="#向量点乘-详解" class="headerlink" title="向量点乘 详解"></a>向量点乘 详解</h2><p><strong><font size="4">学习内容:</font></strong></p>
 <ul>
 <li>1.点乘计算公式</li>
 <li>2.点乘的几何意义</li>
 <li>3.点乘公式推导</li>
 </ul>
 <p><strong><font size="4">点乘计算公式:</font></strong></p>
+<ul>
+<li>向量A(Xa,Ya,Za)</li>
+<li>向量B(Xb,Yb,Zb)</li>
+<li>A·B&#x3D; Xa<em>Xb + Ya</em>Yb + Za*Zb</li>
+<li>向量·向量&#x3D;标量</li>
+</ul>
+<p><strong><font size="4">点乘几何意义:</font></strong></p>
+<ul>
+<li>点乘可以得到一个向量在自己向量上的 <strong><font color=red>投影的长度</font></strong></li>
+</ul>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E7%82%B9%E4%B9%98%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89.png" class="" title="点乘几何意义"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+<p> <br><font color=red></p>
+<ul>
+<li>点乘结果 &gt; 0 两个向量夹角为锐角</li>
+<li>点乘结果 &#x3D; 0 两个向量夹角为直角</li>
+<li>点乘结果 &lt; 0 两个向量夹角为钝角</li>
+<li>我们可以用这个规律判断敌人的大致方位</li>
+</ul>
+</font>
+
+<hr>
+<h2 id="补充知识点-调试画线"><a href="#补充知识点-调试画线" class="headerlink" title="补充知识点 调试画线"></a>补充知识点 调试画线</h2><p><strong><font size="3">Debug类中的DrawLine静态方法:画线段</font></strong></p>
+<ul>
+<li>画线段:在指定的起始点与结束点之间绘制一条直线。</li>
+<li>参数:前两个参数分别是起点和终点,最后一个参数是划线颜色。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    Debug.DrawRay(<span class="keyword">this</span>.transform.position, <span class="keyword">this</span>.transform.up, Color.blue);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="3">Debug类中的DrawRay静态方法:画射线</font></strong></p>
+<ul>
+<li>画射线:在世界坐标中绘制一条从起点到起点加方向的直线。</li>
+<li>参数:前面两个参数分别是起点和方向，最后一个参数是划线颜色。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    Debug.DrawRay(<span class="keyword">this</span>.transform.position, <span class="keyword">this</span>.transform.up, Color.blue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：方向相同的划线可能重合，可能只显示某一划线</p>
+</blockquote>
+<hr>
+<p><strong><font size="3">Dot静态方法:计算两个向量的点积</font></strong></p>
+<ul>
+<li>Vector3.Dot方法用于计算两个向量的点积。它接受两个Vector3类型的参数，表示要计算点积的两个向量。</li>
+<li>示例代码：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    Vector3 vector1 = <span class="keyword">new</span> Vector3(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">    Vector3 vector2 = <span class="keyword">new</span> Vector3(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">float</span> dotProduct = Vector3.Dot(vector1, vector2);</span><br><span class="line">    Debug.Log(<span class="string">&quot;Dot Product: &quot;</span> + dotProduct);<span class="comment">//Dot Product: 32 = 1x4+2x5+3x6</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong><font size="4">通过点乘判断物体的方位:</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 思路：用自己的forward向量和自己和目标的位置差算出来的向量点乘判断是否大于0</span></span><br><span class="line">    <span class="comment">// 给用自己的forward向量和目标的位置差算出来的向量划线</span></span><br><span class="line">    Debug.DrawRay(<span class="keyword">this</span>.transform.position, <span class="keyword">this</span>.transform.forward, Color.red);</span><br><span class="line">    Debug.DrawRay(<span class="keyword">this</span>.transform.position, target.position - <span class="keyword">this</span>.transform.position, Color.red);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Dot静态方法 得到两个向量的点乘结果</span></span><br><span class="line">    <span class="comment">// 两个向量的点积。</span></span><br><span class="line">    <span class="comment">// Vector3 提供了计算点乘的方法</span></span><br><span class="line">    <span class="comment">// 向量 a 点乘 AB 的结果</span></span><br><span class="line">    <span class="built_in">float</span> dotResult = Vector3.Dot(<span class="keyword">this</span>.transform.forward, target.position - <span class="keyword">this</span>.transform.position);</span><br><span class="line">    <span class="keyword">if</span> (dotResult &gt;= <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">&quot;它在我前方&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">&quot;它在我后方&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">运行效果:</font></strong></p>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E7%82%B9%E4%B9%98%E5%88%A4%E6%96%AD%E7%89%A9%E4%BD%93%E6%96%B9%E4%BD%8D.gif" class="" title="点乘判断物体的方位"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+<p><strong><font size="4">点乘角度公式推导:</font></strong></p>
+<div align=center>
+<style>.ecphdzohwsge{}</style><img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E7%82%B9%E4%B9%98%E8%A7%92%E5%BA%A6%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC.png" class="ecphdzohwsge"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+</div>
+
+<ul>
+<li>1.Cosβ &#x3D; 直角边 &#x2F; 单位向量B模长<br>    直角边 &#x3D; Cosβ * 单位向量B模长<br>    +(↓)  </li>
+<li>2.直角边 &#x3D; 单位向量A · 单位向量B<br>↓</li>
+<li>Cosβ * 单位向量B模长 &#x3D; 单位向量A · 单位向量B<br>↓</li>
+<li>Cosβ &#x3D; 单位向量A · 单位向量B<br>↓</li>
+<li>推出结果：β &#x3D; Acos(单位向量A · 单位向量B)</li>
+</ul>
+<p><strong><font size="4">通过点乘推导公式算出夹角:</font></strong></p>
+<ul>
+<li>手动通过点乘公式计算两个向量之间的夹角的步骤如下：</li>
+</ul>
+<p><strong><font size="3">1.使用单位向量计算点乘结果：</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    <span class="built_in">float</span> dotResult = Vector3.Dot(<span class="keyword">this</span>.transform.forward, (target.position - <span class="keyword">this</span>.transform.position).normalized);</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">2.使用反余弦三角函数得出角度，并将弧度制转换为角度制：</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    print(<span class="string">&quot;手动算出的角度-&quot;</span> + Mathf.Acos(dotResult) * Mathf.Rad2Deg);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这些步骤可以用来手动计算两个向量之间的夹角，适用于需要更细致控制或理解计算过程的情况。</p>
+</blockquote>
+<p><strong><font size="4">Angle静态方法:计算两个向量之间的夹角</font></strong></p>
+<ul>
+<li>Vector3.Angle静态方法用于计算两个向量之间的夹角，并以度为单位返回该角度。</li>
+<li>参数：from表示起始向量，to表示目标向量。</li>
+<li>返回值：from向量与to向量之间的夹角（以度为单位）。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    Vector3 fromVector = <span class="keyword">this</span>.transform.forward;</span><br><span class="line">    Vector3 toVector = target.position - <span class="keyword">this</span>.transform.position;</span><br><span class="line">    <span class="built_in">float</span> angle = Vector3.Angle(fromVector, toVector);</span><br><span class="line">    print(<span class="string">&quot;Angle静态方法算出的角度-&quot;</span> + angle);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：返回的角度范围是0到180度之间，表示两个向量之间的夹角。</p>
+</blockquote>
+<h2 id="练习题-4"><a href="#练习题-4" class="headerlink" title="练习题"></a>练习题</h2><p><strong><font size="4">1.当一个物体B在物体A前方45度角范围内，并且离A只有5米距离时，在控制台打印“发现入侵者”</font></strong></p>
+<details>
+  <summary>查看答案</summary>
+
+<p><strong><font size="3">手动算出角度:</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestAngle</span>:<span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Transform B;<span class="comment">//得到B的位置信息 拖拽赋值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (Vector3.Distance(<span class="keyword">this</span>.transform.position, B.transform.position) &lt;= <span class="number">5</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 第一步：算出点乘结果（方向向量）</span></span><br><span class="line">            <span class="built_in">float</span> dotResult = Vector3.Dot(<span class="keyword">this</span>.transform.forward, (B.transform.position - <span class="keyword">this</span>.transform.position).normalized);</span><br><span class="line">            <span class="comment">// 第二步：通过反余弦函数算出夹角</span></span><br><span class="line">            <span class="keyword">if</span> (Mathf.Acos(dotResult) * Mathf.Rad2Deg &lt;= <span class="number">22.5f</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                print(<span class="string">&quot;手动算角度 发现入侵者&quot;</span>);</span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">Angle直接算角度:</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">TestAngle</span>:<span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> Transform B;得<span class="comment">//到B的位置信息 拖拽赋值</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// Angle直接算角度</span></span><br><span class="line">        <span class="keyword">if</span> (Vector3.Distance(<span class="keyword">this</span>.transform.position, B.transform.position) &lt;= <span class="number">5</span> &amp;&amp; Vector3.Angle(<span class="keyword">this</span>.transform.forward, B.transform.position - <span class="keyword">this</span>.transform.position) &lt;= <span class="number">22.5f</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            print(<span class="string">&quot;Angle直接算角度 发现入侵者&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><font size="3">绘制实心扇形，方便测试观看</font></strong></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> radius = <span class="number">5f</span>;  <span class="comment">// 扇形半径</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">float</span> angle = <span class="number">45f</span>;  <span class="comment">// 扇形角度</span></span><br><span class="line">    <span class="keyword">public</span> Color arcColor = Color.yellow;  <span class="comment">// 扇形颜色</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">OnDrawGizmos</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 设置颜色</span></span><br><span class="line">        Handles.color = arcColor;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算扇形起点和终点的方向</span></span><br><span class="line">        Vector3 forward = m_target.forward;  <span class="comment">// 扇形的正前方向</span></span><br><span class="line">        Vector3 fromDirection = Quaternion.Euler(<span class="number">0</span>, -angle / <span class="number">2</span>, <span class="number">0</span>) * forward;  <span class="comment">// 扇形左边界</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 绘制实心扇形</span></span><br><span class="line">        Handles.DrawSolidArc(m_target.position, Vector3.up, fromDirection, angle, radius);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这两种方法都实现了在物体B位于物体A前方45度角范围内，并且距离A不超过5米时，在控制台打印“发现入侵者”的功能。判断边界是22.5原因是45分开了两边。</p>
+</blockquote>
+<details>
+
+<h1 id="Vector3向量叉乘"><a href="#Vector3向量叉乘" class="headerlink" title="Vector3向量叉乘"></a>Vector3向量叉乘</h1><p><code>3D数学-Vector3向量-向量叉乘</code></p>
+<h2 id="向量叉乘-详解"><a href="#向量叉乘-详解" class="headerlink" title="向量叉乘 详解"></a>向量叉乘 详解</h2><p><strong><font size="4">学习内容:</font></strong></p>
+<ul>
+<li>1.叉乘计算公式</li>
+<li>2.叉乘几何意义</li>
+</ul>
+<p><strong><font size="4">叉乘计算公式：</font></strong></p>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E5%8F%89%E4%B9%98%E7%9A%84%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F.png" class="" title="叉乘的计算公式"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+<ul>
+<li><font color=red>向量 × 向量 &#x3D; 向量</font></li>
+<li>向量A(Xa,Ya,Za)</li>
+<li>向量B(Xb,Yb,Zb)</li>
+<li>A × B &#x3D; (X,Y,Z)</li>
+<li>X &#x3D; YaZb - ZaYb</li>
+<li>Y &#x3D; ZaXb - XaZb</li>
+<li>Z &#x3D; XaYb - YaXb</li>
+</ul>
+<p><strong><font size="3">Cross静态方法:计算两个向量的叉乘</font></strong></p>
+<ul>
+<li>Vector3.Cross静态方法用于计算两个向量的叉乘，并返回叉积的结果向量。</li>
+<li>参数：两个向量a和b。</li>
+<li>返回值：叉积的结果向量，垂直于a和b所在的平面。</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Transform A,B;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    Vector3 result = Vector3.Cross(A.position, B.position);</span><br><span class="line">    print(result);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong><font size="4">叉乘的几何意义:</font></strong></p>
+<img src="/L_Study.github.io/2025/03/14/Unity%E5%9F%BA%E7%A1%80/%E5%8F%89%E4%B9%98%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89.png" class="" title="叉乘的几何意义"  data-tag='post-image' onload='this.onload=null;this.style.opacity=1;' onerror='this.onerror=null;this.src="/L_Study.github.io/img/404.jpg"'>
+
+<ul>
+<li>A × B 得到的向量同时垂直A和B</li>
+<li>A × B 向量垂直于A和B组成的平面</li>
+<li>A × B &#x3D; -(B × A)</li>
+</ul>
+<blockquote>
+<p>数学中的叉乘方向使用右手法则。<br>Unity当中使用左手法则，因为Unity使用的是左手坐标系</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Transform A,B;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Update</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 假设向量 A和B 都在 XZ平面上</span></span><br><span class="line">    <span class="comment">// 向量A 叉乘 向量 B 会得到垂直于向量A和向量B所在的平面的向量，又称法向量</span></span><br><span class="line">    <span class="comment">// y大于0 证明 B在A右侧</span></span><br><span class="line">    <span class="comment">// y小于0 证明 B在A左侧</span></span><br><span class="line"></span><br><span class="line">    Vector3 C1 = Vector3.Cross(A.position, B.position);</span><br><span class="line">    <span class="keyword">if</span> (C1.y &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">&quot;B在A的右侧&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">&quot;B在A的左侧&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Vector3 C2 = Vector3.Cross(B.position, A.position);</span><br><span class="line">    <span class="keyword">if</span> (C2.y &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">&quot;A在B的右侧&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        print(<span class="string">&quot;A在B的左侧&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>向量叉乘对于我们的意义</li>
+<li>1.得到一个平面的法向量</li>
+<li>2.得到两个向量之间的左右位置关系</li>
+</ul>
 
 </article>
     
@@ -1303,7 +1451,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类常用方法"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类常用方法"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Mathf数学计算类常用方法</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类三角函数"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类三角函数"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">Mathf数学计算类三角函数</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="总结"><a rel="nofollow" class="trm-toc-link" href="#总结"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">总结</span></a></li><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题-1"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="坐标系"><a rel="nofollow" class="trm-toc-link" href="#坐标系"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">坐标系</span></a></li><li class="trm-toc-item trm-toc-level-1" title="Vector3向量模长和单位向量"><a rel="nofollow" class="trm-toc-link" href="#Vector3向量模长和单位向量"><span class="trm-toc-number">4.</span> <span class="trm-toc-text">Vector3向量模长和单位向量</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="向量模长和单位向量 详解"><a rel="nofollow" class="trm-toc-link" href="#向量模长和单位向量-详解"><span class="trm-toc-number">4.1.</span> <span class="trm-toc-text">向量模长和单位向量 详解</span></a></li><li class="trm-toc-item trm-toc-level-2" title="总结"><a rel="nofollow" class="trm-toc-link" href="#总结-1"><span class="trm-toc-number">4.2.</span> <span class="trm-toc-text">总结</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题-2"><span class="trm-toc-number">5.</span> <span class="trm-toc-text">练习题</span></a></li><li class="trm-toc-item trm-toc-level-1" title="Vector3向量加减乘除"><a rel="nofollow" class="trm-toc-link" href="#Vector3向量加减乘除"><span class="trm-toc-number">6.</span> <span class="trm-toc-text">Vector3向量加减乘除</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="向量加减乘除 详解"><a rel="nofollow" class="trm-toc-link" href="#向量加减乘除-详解"><span class="trm-toc-number">6.1.</span> <span class="trm-toc-text">向量加减乘除 详解</span></a></li><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题-3"><span class="trm-toc-number">6.2.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="Vector3向量点乘"><a rel="nofollow" class="trm-toc-link" href="#Vector3向量点乘"><span class="trm-toc-number">7.</span> <span class="trm-toc-text">Vector3向量点乘</span></a></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类常用方法"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类常用方法"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">Mathf数学计算类常用方法</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="Mathf数学计算类三角函数"><a rel="nofollow" class="trm-toc-link" href="#Mathf数学计算类三角函数"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">Mathf数学计算类三角函数</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="总结"><a rel="nofollow" class="trm-toc-link" href="#总结"><span class="trm-toc-number">2.1.</span> <span class="trm-toc-text">总结</span></a></li><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题-1"><span class="trm-toc-number">2.2.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="坐标系"><a rel="nofollow" class="trm-toc-link" href="#坐标系"><span class="trm-toc-number">3.</span> <span class="trm-toc-text">坐标系</span></a></li><li class="trm-toc-item trm-toc-level-1" title="Vector3向量模长和单位向量"><a rel="nofollow" class="trm-toc-link" href="#Vector3向量模长和单位向量"><span class="trm-toc-number">4.</span> <span class="trm-toc-text">Vector3向量模长和单位向量</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="向量模长和单位向量 详解"><a rel="nofollow" class="trm-toc-link" href="#向量模长和单位向量-详解"><span class="trm-toc-number">4.1.</span> <span class="trm-toc-text">向量模长和单位向量 详解</span></a></li><li class="trm-toc-item trm-toc-level-2" title="总结"><a rel="nofollow" class="trm-toc-link" href="#总结-1"><span class="trm-toc-number">4.2.</span> <span class="trm-toc-text">总结</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题-2"><span class="trm-toc-number">5.</span> <span class="trm-toc-text">练习题</span></a></li><li class="trm-toc-item trm-toc-level-1" title="Vector3向量加减乘除"><a rel="nofollow" class="trm-toc-link" href="#Vector3向量加减乘除"><span class="trm-toc-number">6.</span> <span class="trm-toc-text">Vector3向量加减乘除</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="向量加减乘除 详解"><a rel="nofollow" class="trm-toc-link" href="#向量加减乘除-详解"><span class="trm-toc-number">6.1.</span> <span class="trm-toc-text">向量加减乘除 详解</span></a></li><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题-3"><span class="trm-toc-number">6.2.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="Vector3向量点乘"><a rel="nofollow" class="trm-toc-link" href="#Vector3向量点乘"><span class="trm-toc-number">7.</span> <span class="trm-toc-text">Vector3向量点乘</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="向量点乘 详解"><a rel="nofollow" class="trm-toc-link" href="#向量点乘-详解"><span class="trm-toc-number">7.1.</span> <span class="trm-toc-text">向量点乘 详解</span></a></li><li class="trm-toc-item trm-toc-level-2" title="补充知识点 调试画线"><a rel="nofollow" class="trm-toc-link" href="#补充知识点-调试画线"><span class="trm-toc-number">7.2.</span> <span class="trm-toc-text">补充知识点 调试画线</span></a></li><li class="trm-toc-item trm-toc-level-2" title="练习题"><a rel="nofollow" class="trm-toc-link" href="#练习题-4"><span class="trm-toc-number">7.3.</span> <span class="trm-toc-text">练习题</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-1" title="Vector3向量叉乘"><a rel="nofollow" class="trm-toc-link" href="#Vector3向量叉乘"><span class="trm-toc-number">8.</span> <span class="trm-toc-text">Vector3向量叉乘</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="向量叉乘 详解"><a rel="nofollow" class="trm-toc-link" href="#向量叉乘-详解"><span class="trm-toc-number">8.1.</span> <span class="trm-toc-text">向量叉乘 详解</span></a></li><li class="trm-toc-item trm-toc-level-2" title="总结"><a rel="nofollow" class="trm-toc-link" href="#总结-2"><span class="trm-toc-number">8.2.</span> <span class="trm-toc-text">总结</span></a></li></ol></li></ol>
       </div>
     </div>
 
