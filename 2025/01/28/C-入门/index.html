@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="C#入门的基础知识，合适新手观看复习 C#是一种现代的、面向对象的编程语言，由Microsoft开发并包含在.NET框架中。  语法知识脚本结构和基本语法脚本结构12345678910111213141516171819202122232425262728293031&#x2F;&#x2F;引用命名空间（工具包）using System;&#x2F;&#x2F;&#x2F; &lt;summary&gt;&#x2F;&#x2F;&#x2F; 命名空间  —— 工具包&#x2F;&#x2F;&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C#入门">
+<meta property="og:url" content="https://l-cxq-520.github.io/L_Study.github.io/2025/01/28/C-%E5%85%A5%E9%97%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="C#入门的基础知识，合适新手观看复习 C#是一种现代的、面向对象的编程语言，由Microsoft开发并包含在.NET框架中。  语法知识脚本结构和基本语法脚本结构12345678910111213141516171819202122232425262728293031&#x2F;&#x2F;引用命名空间（工具包）using System;&#x2F;&#x2F;&#x2F; &lt;summary&gt;&#x2F;&#x2F;&#x2F; 命名空间  —— 工具包&#x2F;&#x2F;&#x2F;">
+<meta property="og:locale">
+<meta property="article:published_time" content="2025-01-28T13:10:09.000Z">
+<meta property="article:modified_time" content="2025-03-04T14:12:28.260Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="C#">
+<meta name="twitter:card" content="summary">
+
+
+<title >C#入门</title>
+
+<!-- Favicon -->
+
+    <link href='/L_Study.github.io/img/favicon.svg?v=2.2.4' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/L_Study.github.io/img/favicon.svg?v=2.2.4' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/L_Study.github.io/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/L_Study.github.io/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"l-cxq-520.github.io","author":"John Doe","root":"/L_Study.github.io/","typed_text":["Web Developer"],"theme_version":"2.2.4","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":false},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2025-03-04 22:12:28"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/L_Study.github.io/css/index.css?v=2.2.4" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+
+ 
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/L_Study.github.io/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/L_Study.github.io/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            Unity<span>Study</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/L_Study.github.io/" target="">
+                    首页
+                </a>
+                
+                <ul>
+                    
+                    <li>
+                        <a  href="/L_Study.github.io/archives2/" target="">
+                            archives2
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/L_Study.github.io/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/L_Study.github.io/categories/" target="">
+                    分类
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/L_Study.github.io/tags/" target="">
+                    标签
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/L_Study.github.io/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            C#入门
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/L_Study.github.io/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2025
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/L_Study.github.io/img/Icon.JPG">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        L
+    </h5>
+    
+        <div class="trm-label">
+            I`m
+            <span class="trm-typed-text">
+                <!-- Words for theme.user.typedText -->
+            </span>
+        </div>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    <div class="trm-divider trm-mb-40 trm-mt-40"></div>
+    <!-- action button -->
+    <div class="text-center">
+        <a href="mailto:admin@imalun.com" class="trm-btn">
+            联系我
+            <i class="iconfont far fa-envelope"></i>
+        </a>
+    </div>
+    <!-- action button end -->
+
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            01/28
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            21:10
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            John Doe
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <ul>
+<li>C#入门的基础知识，合适新手观看复习</li>
+<li>C#是一种现代的、面向对象的编程语言，由Microsoft开发并包含在.NET框架中。</li>
+</ul>
+<h1 id="语法知识"><a href="#语法知识" class="headerlink" title="语法知识"></a>语法知识</h1><h2 id="脚本结构和基本语法"><a href="#脚本结构和基本语法" class="headerlink" title="脚本结构和基本语法"></a>脚本结构和基本语法</h2><h3 id="脚本结构"><a href="#脚本结构" class="headerlink" title="脚本结构"></a>脚本结构</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引用命名空间（工具包）</span></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 命名空间  —— 工具包</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="keyword">namespace</span> _4.第一个应用程序</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//命名空间 代码块</span></span><br><span class="line">    <span class="comment">//面向对象相关知识点内容 会在这里来写代码</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 类 —— 工具</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">class</span> <span class="title">Program</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//类 代码块</span></span><br><span class="line">        <span class="comment">//面向对象相关知识点内容 会在这里来写代码</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 函数 —— 工具能做的事情</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 主函数 一个程序的主入口</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;args&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="built_in">string</span>[] <span class="keyword">args</span></span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">           <span class="comment">//函数代码块 我们目前学习基础知识时</span></span><br><span class="line">           <span class="comment">//所有的代码 都会写在 该 代码块中</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><h4 id="主要作用"><a href="#主要作用" class="headerlink" title="主要作用"></a>主要作用</h4><p>注释就是对代码的解释和说明，其目的是让人们更加轻松地了解代码。<br>注释内容不会被程序识别，只能起到说明作用。</p>
+<ul>
+<li>第一种注释 两杠注释 &#x2F;&#x2F;…</li>
+<li>第二种注释 星号注释 &#x2F;<em>…</em>&#x2F;</li>
+<li>第三种注释 三杠注释 &#x2F;&#x2F;&#x2F;（一般用于类和方法的说明）</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 注释代码</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> 注释代码</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span>注释代码（第三种常用于以下方法注释信息备注）</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 测试方法</span></span><br><span class="line"> <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;a&quot;&gt;</span>变量<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="keyword">void</span> 测试方法(<span class="built_in">int</span> a)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="打印方法"><a href="#打印方法" class="headerlink" title="打印方法"></a>打印方法</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在控制台 打印出 你好世界这个内容</span></span><br><span class="line"><span class="comment">//在控制台 打印一行信息 打印信息结束后 自动空一行</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;你好世界!&quot;</span>);</span><br><span class="line"><span class="comment">//如果是双引号之间的内容 对于符号没有特别要求</span></span><br><span class="line"><span class="comment">//在控制台打印信息  但是打印完成后 不会自动空行</span></span><br><span class="line">Console.Write(<span class="string">&quot;你好&quot;</span>);</span><br><span class="line">Console.Write(<span class="string">&quot;我要好好学习，天天向上&quot;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="输入（向控制台输入内容）"><a href="#输入（向控制台输入内容）" class="headerlink" title="输入（向控制台输入内容）"></a>输入（向控制台输入内容）</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Console.ReadLine();</span><br><span class="line">Console.ReadKey();</span><br><span class="line">Console.WriteLine(<span class="string">&quot;请玩家输入&quot;</span>);</span><br><span class="line"><span class="comment">//检测玩家输入的代码</span></span><br><span class="line"><span class="comment">//等待玩家输入完毕后（按回车键）才会继续执行后面的代码</span></span><br><span class="line"><span class="comment">//玩家可以输入 很多信息  直到按下回车结束</span></span><br><span class="line">Console.ReadLine();</span><br><span class="line">Console.WriteLine(<span class="string">&quot;玩家输入完毕&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//检测玩家是否按键 只要按了键盘上的任意键 就会认为输入结束</span></span><br><span class="line">Console.ReadKey();</span><br><span class="line">Console.WriteLine(<span class="string">&quot;玩家输入完毕&quot;</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="输出（在控制台打印信息）"><a href="#输出（在控制台打印信息）" class="headerlink" title="输出（在控制台打印信息）"></a>输出（在控制台打印信息）</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;123123&quot;</span>);</span><br><span class="line">Console.Write(<span class="string">&quot;123123123&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="折叠代码："><a href="#折叠代码：" class="headerlink" title="折叠代码："></a>折叠代码：</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">region</span> &quot;折叠代码&quot;</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;这块是折叠代码，里面的内容可以收起来&quot;</span>);</span><br><span class="line"><span class="meta">#<span class="keyword">endregion</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="主要作用-1"><a href="#主要作用-1" class="headerlink" title="主要作用:"></a>主要作用:</h4><ul>
+<li>使让我们编程时逻辑更加清晰</li>
+<li>它是有 #region 和 #endregion 配对出现的</li>
+<li>它的具体作用是可以将中间包裹的代码折叠起来，避免代码太凌乱</li>
+<li>本质是编辑器提供给我们的预处理指令</li>
+<li>它只会在编辑时有用，发布了代码或执行代码时，它会被自动删除</li>
+</ul>
+<h3 id="如何声明变量"><a href="#如何声明变量" class="headerlink" title="如何声明变量:"></a>如何声明变量:</h3><ul>
+<li>变量是可以变化的容器</li>
+<li>变量就是用来存储各种不同类型数值的一个容器</li>
+<li>不同的变量类型可以存储不同类型的值</li>
+</ul>
+<h4 id="变量声明固定写法"><a href="#变量声明固定写法" class="headerlink" title="变量声明固定写法"></a>变量声明固定写法</h4><ul>
+<li>变量类型 变量名&#x3D;初始值;</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> i = <span class="number">1</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;i:&quot;</span> + i);<span class="comment">//打印结果：1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>变量类型有14种变化</li>
+<li>变量名我们自定义，要按照一定规则</li>
+<li>初始值一定要和变量类型统一</li>
+<li>&#x3D; 和 ; 是固定的不变的</li>
+</ul>
+<h3 id="C-中14种不同的变量类型"><a href="#C-中14种不同的变量类型" class="headerlink" title="C#中14种不同的变量类型"></a>C#中14种不同的变量类型</h3><h4 id="有符号整型变量"><a href="#有符号整型变量" class="headerlink" title="有符号整型变量"></a>有符号整型变量</h4><ul>
+<li>sbyte：取值范围 -128~127</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sbyte</span> sb = <span class="number">127</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;sbyte 变量sb中的存储的值是：&quot;</span> + sb);<span class="comment">// 127</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>int：取值范围 -21亿~21亿</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> i1 = <span class="number">2</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;int 变量i1中的存储的值是：&quot;</span> + i1);<span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>short：取值范围 -32768~32767之间的数</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">short</span> s = <span class="number">30</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;short 变量s中的存储的值是：&quot;</span> + s);<span class="comment">// 30</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>long：取值范围 -9百万兆~9百万兆之间的数</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">long</span> l = <span class="number">40</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;long 变量l中的存储的值是：&quot;</span> + l);<span class="comment">// 40</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="无符号整型变量"><a href="#无符号整型变量" class="headerlink" title="无符号整型变量"></a>无符号整型变量</h4><ul>
+<li>byte：取值范围 0~255</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">byte</span> b = <span class="number">1</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;byte 变量b中的储存的值是：&quot;</span> + b);<span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>uint：取值范围 0~42亿多的一个范围</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">uint</span> ui = <span class="number">2</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;uint 变量ui中的储存的值是：&quot;</span> + ui);<span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>ushort：0~65535之间的一个数</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ushort</span> us = <span class="number">3</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;ushort 变量us中的储存的值是：&quot;</span> + us);<span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>ulong：取值范围 0~18百万兆之间的数</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ulong</span> ul = <span class="number">10000</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;ulong 变量ul中的储存的值是：&quot;</span> + ul);<span class="comment">// 10000</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="浮点数（小数）"><a href="#浮点数（小数）" class="headerlink" title="浮点数（小数）"></a>浮点数（小数）</h4><ul>
+<li>float：取值范围 存储7&#x2F;8位有效数字，根据编译器不同，有效数字也可能不一样（四舍五入）</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> f = <span class="number">0.123456789F</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;float 变量f中储存的值是:&quot;</span> + f);<span class="comment">//0.1234568</span></span><br><span class="line"><span class="built_in">float</span> f2 = <span class="number">1.01234567890f</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;float 变量f2中储存的值是:&quot;</span> + f2);<span class="comment">//1.012346</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>double：取值范围 存储15~17位有效数字，根据编译器不同，有效数字也可能不一样<br>c#中声明的小数默认是double的类型，末尾不需要添加字母<br>抛弃的数字会四舍五入</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">double</span> d = <span class="number">0.12345678901234567890123456789</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;double 变量d中的储存的值是：&quot;</span> + d);<span class="comment">//0.123456789012346</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>decimal：取值范围 存储27~28位的有效数字，根据编译器不同，有效数字也可能不一样<br>在后面加M或m告诉系统它是decimal类型<br>不建议使用</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">decimal</span> de = <span class="number">0.123456789012345678901234567890</span>m;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;decimal 变量de中的储存的值是：&quot;</span> + de);<span class="comment">//0.1234567890123456789012345679</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="特殊类型"><a href="#特殊类型" class="headerlink" title="特殊类型"></a>特殊类型</h4><ul>
+<li>bool：取值范围 true false 表示真假的数据类型 真假类型</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bool</span> bo = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">bool</span> bo2 = <span class="literal">false</span>;</span><br><span class="line">Console.WriteLine(bo + <span class="string">&quot;_&quot;</span> + bo2); <span class="comment">// true_false</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>char：是用来存储单个字符的变量类型 字符类型</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">char</span> c = <span class="string">&#x27;L&#x27;</span>;</span><br><span class="line">Console.WriteLine(c); <span class="comment">// L</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>string：是字符串类型，用来存储多个字符的，没有上限</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = <span class="string">&quot;的骄傲了肯定就发生123123sdafjkasdkfjaskldjfAKKSAJD&quot;</span>;</span><br><span class="line">Console.WriteLine(str);  <span class="comment">// 的骄傲了肯定就发生123123sdafjkasdkfjaskldjfAKKSAJD</span></span><br></pre></td></tr></table></figure>
+<h3 id="为什么有那么多不同类型的变量"><a href="#为什么有那么多不同类型的变量" class="headerlink" title="为什么有那么多不同类型的变量"></a>为什么有那么多不同类型的变量</h3><ul>
+<li>不同的变量存储的范围和类型不一样，本质是占用的内存空间不同</li>
+<li>选择不同的数据（变量）类型装载不同的数据</li>
+<li>示例：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 姓名</span></span><br><span class="line"><span class="built_in">string</span> myName = <span class="string">&quot;L&quot;</span>;</span><br><span class="line"><span class="comment">// 年龄</span></span><br><span class="line"><span class="built_in">byte</span> age = <span class="number">18</span>;</span><br><span class="line"><span class="comment">// 身高cm</span></span><br><span class="line"><span class="built_in">float</span> height = <span class="number">177.5f</span>;</span><br><span class="line"><span class="comment">// 体重kg</span></span><br><span class="line"><span class="built_in">float</span> weight = <span class="number">68.5f</span>;</span><br><span class="line"><span class="comment">// 性别 true女 false男</span></span><br><span class="line"><span class="built_in">bool</span> sex = <span class="literal">false</span>;       </span><br></pre></td></tr></table></figure>
+<ul>
+<li>简单口诀：数字用int，小数用float，字符串用string，真假用bool</li>
+</ul>
+<h3 id="多个相同类型的变量同时声明"><a href="#多个相同类型的变量同时声明" class="headerlink" title="多个相同类型的变量同时声明"></a>多个相同类型的变量同时声明</h3><ul>
+<li>一个一个声明变量</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">char</span> qw;</span><br><span class="line"><span class="built_in">int</span> i2 = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">float</span> f3 = <span class="number">3.2f</span>;</span><br><span class="line"><span class="built_in">string</span> str2 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="built_in">bool</span> bo3 = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>多个同类型变量声明不赋值</li>
+</ul>
+<h4 id="固定写法"><a href="#固定写法" class="headerlink" title="固定写法"></a>固定写法</h4><ul>
+<li>变量类型 变量名 &#x3D; 初始值, 变量名 &#x3D; 初始值, …;</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a1 = <span class="number">1</span>, b1 = <span class="number">2</span>, c1 = <span class="number">3</span>, d1 = <span class="number">4</span>;</span><br><span class="line">Console.WriteLine(b1);<span class="comment">// 2</span></span><br><span class="line"><span class="built_in">string</span> s1 = <span class="string">&quot;123&quot;</span>, s2 = <span class="string">&quot;234&quot;</span>;</span><br><span class="line">Console.WriteLine(s1 + s2);<span class="comment">//123234 </span></span><br></pre></td></tr></table></figure>
+<h3 id="变量初始化相关"><a href="#变量初始化相关" class="headerlink" title="变量初始化相关"></a>变量初始化相关</h3><ul>
+<li>变量声明时 可以不设置初始值 但是不建议这样写 这样不安全</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a2;</span><br><span class="line"><span class="comment">//Console.WriteLine(a2);  //变量只声明没赋值 会报错</span></span><br><span class="line">a2 = <span class="number">1</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;a2:&quot;</span> + a2);   <span class="comment">//变量赋值了 不报错 打印 a2:1</span></span><br></pre></td></tr></table></figure>
+<h2 id="变量的本质"><a href="#变量的本质" class="headerlink" title="变量的本质"></a>变量的本质</h2><h3 id="变量类型回顾"><a href="#变量类型回顾" class="headerlink" title="变量类型回顾"></a>变量类型回顾</h3><h4 id="有符号类型"><a href="#有符号类型" class="headerlink" title="有符号类型"></a>有符号类型</h4><ul>
+<li>sbyte （-128~127）</li>
+<li>int （-21亿多~21亿多）</li>
+<li>short（-3万多~3万多）</li>
+<li>long （-9百万兆多~9百万兆多）</li>
+</ul>
+<h4 id="无符号类型"><a href="#无符号类型" class="headerlink" title="无符号类型"></a>无符号类型</h4><ul>
+<li>byte （0~255）</li>
+<li>uint （0~42亿多）</li>
+<li>ulong （0~6万多）</li>
+<li>ushort （0~18百万兆多）</li>
+</ul>
+<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><ul>
+<li>float （7~8位有效数字）</li>
+<li>double （15~17位有效数字）</li>
+<li>decimal （27~28位有效数字）</li>
+</ul>
+<h4 id="特殊类型-1"><a href="#特殊类型-1" class="headerlink" title="特殊类型"></a>特殊类型</h4><ul>
+<li>string （true和false）</li>
+<li>bool （一个字符）</li>
+<li>char （一串字符）</li>
+</ul>
+<h3 id="变量的储存空间"><a href="#变量的储存空间" class="headerlink" title="变量的储存空间"></a>变量的储存空间</h3><ul>
+<li>1byte&#x3D;8bit</li>
+<li>1MB&#x3D;1024byte</li>
+<li>1GB&#x3D;1024MB</li>
+<li>1TB&#x3D;1024GB</li>
+</ul>
+<h4 id="获取变量类型所占的内存空间"><a href="#获取变量类型所占的内存空间" class="headerlink" title="获取变量类型所占的内存空间"></a>获取变量类型所占的内存空间</h4><ul>
+<li>通过sizeof方法可以获取变量类型所占的内存空间（单位：字节）</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sizeof</span>（变量类型）</span><br></pre></td></tr></table></figure>
+<h4 id="有符号类型-1"><a href="#有符号类型-1" class="headerlink" title="有符号类型"></a>有符号类型</h4><ul>
+<li>int</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> intsizeof=<span class="keyword">sizeof</span>(<span class="built_in">int</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;int所占用的内存空间：&quot;</span>+intsizeof);<span class="comment">//4个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>sbyte</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> sbytesizeof=<span class="keyword">sizeof</span>(<span class="built_in">sbyte</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;sbyte所占用的内存空间：&quot;</span>+sbytesizeof);<span class="comment">//1个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>long</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> longsizeof=<span class="keyword">sizeof</span>(<span class="built_in">long</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;long所占用的内存空间：&quot;</span>+longsizeof);<span class="comment">//8个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>short</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> shortsizeof=<span class="keyword">sizeof</span>(<span class="built_in">short</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;short所占用的内存空间：&quot;</span>+shortsizeof);<span class="comment">//2个字节</span></span><br></pre></td></tr></table></figure>
+<h4 id="无符号类型-1"><a href="#无符号类型-1" class="headerlink" title="无符号类型"></a>无符号类型</h4><ul>
+<li>byte</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> bytesizeof=<span class="keyword">sizeof</span>(<span class="built_in">byte</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;byte所占用的内存空间：&quot;</span>+bytesizeof);<span class="comment">//1个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>uint</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> uintsizeof=<span class="keyword">sizeof</span>(<span class="built_in">uint</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;uint所占用的内存空间：&quot;</span>+uintsizeof);<span class="comment">//4个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>ulong</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> ulongsizeof=<span class="keyword">sizeof</span>(<span class="built_in">ulong</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;ulong所占用的内存空间：&quot;</span>+ulongsizeof);<span class="comment">//8个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>ushort</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> ushortsizeof=<span class="keyword">sizeof</span>(<span class="built_in">ushort</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;ushort所占用的内存空间：&quot;</span>+ushortsizeof);<span class="comment">//2个字节</span></span><br></pre></td></tr></table></figure>
+<h4 id="浮点数-1"><a href="#浮点数-1" class="headerlink" title="浮点数"></a>浮点数</h4><ul>
+<li>float</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> floatsizeof=<span class="keyword">sizeof</span>(<span class="built_in">float</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;float所占用的内存空间：&quot;</span>+floatsizeof);<span class="comment">//4个字节</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>double</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> doublesizeof=<span class="keyword">sizeof</span>(<span class="built_in">double</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;double所占用的内存空间：&quot;</span>+doublesizeof);<span class="comment">//8个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>decimal</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> decimalsizeof=<span class="keyword">sizeof</span>(<span class="built_in">decimal</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;decimal所占用的内存空间：&quot;</span>+decimalsizeof);<span class="comment">//16个字节</span></span><br></pre></td></tr></table></figure>
+<h4 id="特殊类型-2"><a href="#特殊类型-2" class="headerlink" title="特殊类型"></a>特殊类型</h4><ul>
+<li>bool</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> boolsizeof=<span class="keyword">sizeof</span>(<span class="built_in">bool</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;bool所占用的内存空间：&quot;</span>+boolsizeof);<span class="comment">//2个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>char</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> charsizeof=<span class="keyword">sizeof</span>(<span class="built_in">char</span>);</span><br><span class="line">Console.WriteLine(<span class="string">&quot;char所占用的内存空间：&quot;</span>+charsizeof);<span class="comment">//2个字节</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>string<br>注意string：sizeof无法获取string类型所占的内存大小，因为字符串长度是可变的，不定。</li>
+</ul>
+<h3 id="变量的本质是2进制"><a href="#变量的本质是2进制" class="headerlink" title="变量的本质是2进制"></a>变量的本质是2进制</h3><p>  变量的本质是2进制——&gt; 计算机中所有数据的本质都是二进制，是一堆0和1。<br>为什么是2进制？<br>数据传递只能通过电信号，只有开和关两种状态。所以就用0和1来表示这两种状态。<br>计算机中的存储单位最小为bit（位），它只能表示0和1两个数字。<br>1bit 就是1个数，要么是0要么是1。<br>为了方便数据表示，出现一个叫byte（字节）的单位，它是由8个bit组成的存储单位。所以我们一般说一个字节为8位。<br>一个字节的状态举例：<br>1byte &#x3D; 0000 0000<br>1byte &#x3D; 1111 1111<br>1字节可以表示2的8次方种状态，即0-255。<br>有符号数第一个比特充当符号位。当该符号位为0时，表示的是正数，为1时表示负数。 </p>
+<h4 id="二进制转十进制"><a href="#二进制转十进制" class="headerlink" title="二进制转十进制"></a>二进制转十进制</h4><p>从右往左 依次为2的平方叠加<br>数字为1的2的平方拿出来相加<br>得出十进制的结果<br>110101 二进制<br>1+4+16+32<br>转换为十进制：53<br>111101  二进制<br>1+4+8+16+32<br>转换为十进制：61<br>1101011 二进制<br>1+2+8+32+64<br>转换为十进制：107 </p>
+<h4 id="十进制转二进制"><a href="#十进制转二进制" class="headerlink" title="十进制转二进制"></a>十进制转二进制</h4><p>把目标值依次减去2的平方 整除到0为止<br> 有次方的为1 没有的则为0<br>180 十进制<br>180-4-16-32-128&#x3D;0<br>转换成二进制： 10110100<br>200 十进制<br>200-128-64-8&#x3D;0<br>转换成二进制：11001000<br>500 十进制<br>500-256-128-64-32-16-4&#x3D;0<br>转换成二进制： 111110100</p>
+<h2 id="变量的命名规范"><a href="#变量的命名规范" class="headerlink" title="变量的命名规范"></a>变量的命名规范</h2><h3 id="变量的命名必须遵守的规则"><a href="#变量的命名必须遵守的规则" class="headerlink" title="变量的命名必须遵守的规则"></a>变量的命名必须遵守的规则</h3><h4 id="在编程中，对于变量的命名需要遵守一些规则，以保证代码的规范性和可读性。以下是一些必须遵守的规则："><a href="#在编程中，对于变量的命名需要遵守一些规则，以保证代码的规范性和可读性。以下是一些必须遵守的规则：" class="headerlink" title="在编程中，对于变量的命名需要遵守一些规则，以保证代码的规范性和可读性。以下是一些必须遵守的规则："></a>在编程中，对于变量的命名需要遵守一些规则，以保证代码的规范性和可读性。以下是一些必须遵守的规则：</h4><ul>
+<li>不能重名</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> i = <span class="number">2</span>;<span class="comment">//错误</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>不能以数字开头</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> <span class="number">2</span>x = <span class="number">3</span>;<span class="comment">//错误</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>不能以程序关键字命名</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> <span class="keyword">sizeof</span>= <span class="number">4</span>;<span class="comment">//错误</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>不能有特殊符号（下划线除外）</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span>? = <span class="number">1</span>;<span class="comment">//错误</span></span><br><span class="line"><span class="built_in">int</span> a_b = <span class="number">2</span>;<span class="comment">//可以</span></span><br><span class="line"><span class="built_in">int</span> _c = <span class="number">3</span>;<span class="comment">//可以</span></span><br></pre></td></tr></table></figure>
+<h3 id="命名规则建议"><a href="#命名规则建议" class="headerlink" title="命名规则建议"></a>命名规则建议</h3><h4 id="建议的命名规则包括："><a href="#建议的命名规则包括：" class="headerlink" title="建议的命名规则包括："></a>建议的命名规则包括：</h4><ul>
+<li>变量名应有含义，用英文（拼音）表示变量的作用</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> myString = <span class="string">&quot;L&quot;</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>非常不建议的命名规则：用汉字命名</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> 字符串 = <span class="string">&quot;字符串&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="变量常用命名规范"><a href="#变量常用命名规范" class="headerlink" title="变量常用命名规范"></a>变量常用命名规范</h3><h4 id="驼峰命名法"><a href="#驼峰命名法" class="headerlink" title="驼峰命名法"></a>驼峰命名法</h4><ul>
+<li>在驼峰命名法中，变量名的规则是首字母小写，之后每个单词的首字母大写。例如：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> myName = <span class="string">&quot;L&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> yourName = <span class="string">&quot;你的名字&quot;</span>;</span><br><span class="line"><span class="built_in">string</span> yourMotherName = <span class="string">&quot;&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="帕斯卡命名法"><a href="#帕斯卡命名法" class="headerlink" title="帕斯卡命名法"></a>帕斯卡命名法</h4><ul>
+<li>帕斯卡命名法要求所有单词的首字母都大写，通常用于函数和类的命名。例如：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> MyName = <span class="string">&quot;dskafj&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="潜在知识点"><a href="#潜在知识点" class="headerlink" title="潜在知识点"></a>潜在知识点</h3><ul>
+<li>在C#中，大小写是敏感的，需要严格区分。这意味着myName和MyName在C#中会被认为是两个不同的变量。</li>
+<li>通过遵循这些命名规则，可以使你的代码更具可读性和维护性。</li>
+</ul>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><ul>
+<li>关键字 const</li>
+<li>在C#中，关键字const用于声明常量。</li>
+</ul>
+<h4 id="固定写法："><a href="#固定写法：" class="headerlink" title="固定写法："></a>固定写法：</h4><ul>
+<li>const 变量类型 变量名 &#x3D; 初始值</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> i = <span class="number">100</span>;<span class="comment">//常量的声明</span></span><br><span class="line"><span class="comment">//对比常量和变量的声明</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> i1 = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">int</span> i2 = <span class="number">10</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="常量的特点"><a href="#常量的特点" class="headerlink" title="常量的特点"></a>常量的特点</h3><ul>
+<li>常量声明必须初始化</li>
+<li>变量声明可以不初始化，之后可以修改：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> name;<span class="comment">// 变量声明可以不初始化</span></span><br><span class="line"><span class="comment">// 之后可以来修改</span></span><br><span class="line">name = <span class="string">&quot;123&quot;</span>;</span><br><span class="line">name = <span class="string">&quot;345&quot;</span>;</span><br><span class="line"><span class="comment">// 但常量声明必须初始化，否则报错：</span></span><br><span class="line"><span class="comment">// const string yourName;// 报错</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">string</span> myName = <span class="string">&quot;L&quot;</span>;</span><br><span class="line"><span class="comment">//不能被修改</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">string</span> e = <span class="string">&quot;cxq&quot;</span>;</span><br><span class="line">e = <span class="string">&quot;lov&quot;</span>;<span class="comment">// 修改报错</span></span><br></pre></td></tr></table></figure>
+<h3 id="常量的作用"><a href="#常量的作用" class="headerlink" title="常量的作用"></a>常量的作用</h3><ul>
+<li>常量的作用在于声明一些常用不变的变量，例如：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// PI 3.1415926</span></span><br><span class="line"><span class="keyword">const</span> <span class="built_in">float</span> PI = <span class="number">3.1415926f</span>;</span><br><span class="line">Console.WriteLine(PI);<span class="comment">// 输出：3.1415926f</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>常量可以用来定义一些不变的值，提高代码的可读性和维护性。</li>
+</ul>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><h3 id="转义字符的使用"><a href="#转义字符的使用" class="headerlink" title="转义字符的使用"></a>转义字符的使用</h3><ul>
+<li>在C#中，转义字符是字符串的一部分，用于表示一些具有特殊含义的字符。这些特殊字符包括在字符串中表现单引号、双引号、换行等。</li>
+</ul>
+<h3 id="什么是转义字符"><a href="#什么是转义字符" class="headerlink" title="什么是转义字符?"></a>什么是转义字符?</h3><ul>
+<li>转义字符是用来表示字符串中特殊含义的字符，例如：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = <span class="string">&quot;asld\&quot;fk&quot;</span>;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;转义字符 \&quot;:&quot;</span> + str);<span class="comment">//转义字符 &quot;:asld&quot;fk</span></span><br></pre></td></tr></table></figure>
+<h4 id="固定写法-1"><a href="#固定写法-1" class="headerlink" title="固定写法"></a>固定写法</h4><ul>
+<li>转义字符的固定写法为 \字符，不同的 \ 和字符的组合表示不同的含义。</li>
+</ul>
+<h3 id="常用的转义字符"><a href="#常用的转义字符" class="headerlink" title="常用的转义字符"></a>常用的转义字符</h3><ul>
+<li>单引号  &#39;</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;\&#x27;哈哈哈\&#x27;&quot;</span>;</span><br><span class="line">Console.WriteLine(str);<span class="comment">// 输出：&#x27;哈哈哈&#x27;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>双引号 &quot;</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;\&quot;哈哈哈\&quot;&quot;</span>;</span><br><span class="line">Console.WriteLine(str);<span class="comment">// 输出：&quot;哈哈哈&quot;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>换行 \n</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;1231231\n23123123123&quot;</span>;</span><br><span class="line">Console.WriteLine(str); <span class="comment">// 输出：</span></span><br><span class="line">                       	  <span class="comment">// 1231231</span></span><br><span class="line">                        	  <span class="comment">// 23123123123</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>斜杠 \</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;哈\\哈哈&quot;</span>;</span><br><span class="line">Console.WriteLine(str);<span class="comment">// 输出：哈\哈哈</span></span><br></pre></td></tr></table></figure>
+<h3 id="不常用转义字符（了解）"><a href="#不常用转义字符（了解）" class="headerlink" title="不常用转义字符（了解）"></a>不常用转义字符（了解）</h3><ul>
+<li>制表符（空一个tab键） \t</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;哈\t哈哈&quot;</span>;</span><br><span class="line">Console.WriteLine(str);<span class="comment">// 输出：哈      哈哈</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>光标退格 \b</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;123\b123&quot;</span>;</span><br><span class="line">Console.WriteLine(str);<span class="comment">// 输出：12123</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>空字符 \0</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;1234\0123&quot;</span>;</span><br><span class="line">Console.WriteLine(str);<span class="comment">// 输出：1234123</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>警报音 \a</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">&quot;\a&quot;</span>;</span><br><span class="line">Console.WriteLine(str);<span class="comment">// 警报音响起</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以直接把转义字符放到输出字符串中</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="string">&quot;1231231231\n123123213\a\t123123&quot;</span>);</span><br><span class="line"><span class="comment">// 输出：</span></span><br><span class="line"><span class="comment">// 1231231231</span></span><br><span class="line"><span class="comment">// 123123213       123123</span></span><br><span class="line"><span class="comment">// 警报音响起</span></span><br></pre></td></tr></table></figure>
+<h3 id="取消转义字符"><a href="#取消转义字符" class="headerlink" title="取消转义字符"></a>取消转义字符</h3><ul>
+<li>在字符串前加个 @就可以取消转义字符：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str2 = <span class="string">@&quot;哈哈\哈哈&quot;</span>;</span><br><span class="line">Console.WriteLine(str2);<span class="comment">// 输出：哈哈\哈哈</span></span><br><span class="line">Console.WriteLine(<span class="string">@&quot;\n\\&quot;</span>);<span class="comment">// 输出：\n\\</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>这是关于C#中转义字符的基本使用，通过转义字符，我们可以在字符串中表示各种特殊含义的字符，增强字符串的表达能力。</li>
+</ul>
+<h2 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h2><h3 id="什么是类型转换"><a href="#什么是类型转换" class="headerlink" title="什么是类型转换"></a>什么是类型转换</h3><ul>
+<li>类型转换是指不同变量类型之间的相互转换。隐式转换是指不同类型之间自动转换，通常是从大范围向小范围转换。</li>
+<li>隐式转换的基本规则——&gt;不同类型之间自动转换</li>
+<li>大范围装小范围</li>
+</ul>
+<h3 id="相同的类型之间的转换"><a href="#相同的类型之间的转换" class="headerlink" title="相同的类型之间的转换"></a>相同的类型之间的转换</h3><h4 id="有符号"><a href="#有符号" class="headerlink" title="有符号"></a>有符号</h4><ul>
+<li>long → int → short → sbyte</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">long</span> longvalue = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">int</span> intvalue = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">short</span> shortvalue = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">sbyte</span> sbytevalue = <span class="number">4</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以用大范围 装小范围的 类型 （隐式转换）</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 隐式转换 int隐式转换成了long 因为long的范围比int大</span></span><br><span class="line">longvalue = intvalue;</span><br><span class="line">longvalue = shortvalue;</span><br><span class="line">longvalue = sbytevalue;</span><br><span class="line"><span class="comment">// intvalue = longvalue;  //不能够用小范围的类型去装在大范围的类型 会报错</span></span><br><span class="line">intvalue = shortvalue;</span><br><span class="line">intvalue = sbytevalue;</span><br><span class="line">shortvalue = sbytevalue;</span><br></pre></td></tr></table></figure>
+<h4 id="无符号"><a href="#无符号" class="headerlink" title="无符号"></a>无符号</h4><ul>
+<li>ulong → uint → ushort → byte</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ulong</span> ulongvalue = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">uint</span> uintvalue = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">ushort</span> ushortvalue = <span class="number">30</span>;</span><br><span class="line"><span class="built_in">byte</span> bytevalue = <span class="number">40</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同上（可以用大范围 装小范围的 类型 （隐式转换））</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ulongvalue = uintvalue;</span><br><span class="line">ulongvalue = ushortvalue;</span><br><span class="line">ulongvalue = bytevalue;</span><br><span class="line"></span><br><span class="line">uintvalue = ushortvalue;</span><br><span class="line">uintvalue = bytevalue;</span><br><span class="line">ushortvalue = bytevalue;</span><br></pre></td></tr></table></figure>
+<h4 id="浮点数-2"><a href="#浮点数-2" class="headerlink" title="浮点数"></a>浮点数</h4><ul>
+<li>decimal → double → float</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">decimal</span> decimalvalue = <span class="number">10.0</span>m;</span><br><span class="line"><span class="built_in">double</span> doublevalue = <span class="number">20.0</span>;</span><br><span class="line"><span class="built_in">float</span> floatvalue = <span class="number">50.5f</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>decimal这个类型 没有办法用隐式转换的形式 去存储 double和float</li>
+<li>float 是可以隐式转换成 double</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doublevalue = floatvalue;</span><br></pre></td></tr></table></figure>
+<h4 id="特殊类型-3"><a href="#特殊类型-3" class="headerlink" title="特殊类型"></a>特殊类型</h4><ul>
+<li>bool 、char 、string</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bool</span> boolvalue = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">char</span> charvalue = <span class="string">&#x27;C&#x27;</span>;</span><br><span class="line"><span class="built_in">string</span> stringvalue = <span class="string">&quot;cxq&quot;</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>他们之间 不存在隐式转换</li>
+</ul>
+<h3 id="不同的类型之间的转换"><a href="#不同的类型之间的转换" class="headerlink" title="不同的类型之间的转换"></a>不同的类型之间的转换</h3><h4 id="有符号与无符号之间"><a href="#有符号与无符号之间" class="headerlink" title="有符号与无符号之间"></a>有符号与无符号之间</h4><ul>
+<li>无符号 不能装负数的</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> intvalue2 = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">short</span> shortvalue2 = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">long</span> longvalue2 = <span class="number">1000</span>;</span><br><span class="line"><span class="built_in">sbyte</span> sbytevalue2 = <span class="number">127</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">uint</span> uintvalue2 = <span class="number">10</span>;</span><br><span class="line"><span class="built_in">ulong</span> ulongvalue2 = <span class="number">20</span>;</span><br><span class="line"><span class="built_in">ushort</span> ushortvalue2 = <span class="number">50</span>;</span><br><span class="line"><span class="built_in">byte</span> bytevalue2 = <span class="number">40</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="无符号装有符号"><a href="#无符号装有符号" class="headerlink" title="无符号装有符号"></a>无符号装有符号</h4><ul>
+<li>有符号的变量 是不能够 隐式转换成 无符号的</li>
+<li>都会报错</li>
+</ul>
+<h4 id="有符号装无符号"><a href="#有符号装无符号" class="headerlink" title="有符号装无符号"></a>有符号装无符号</h4><ul>
+<li>有符号变量 是可以 装 无符号变量的 前提是 范围一定要是涵盖的 存在隐式转换</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//intValue2 = uintValue2;//因为 无符号的变量 可能会超过 这个有符号变量的范围</span></span><br><span class="line">intvalue2 = bytevalue2;<span class="comment">// 因为 无符号的变量 不管是多少 都在 有符号变量的范围内</span></span><br><span class="line">intvalue2 = ushortvalue2;</span><br><span class="line">shortvalue2 = bytevalue2;</span><br><span class="line">longvalue2 = bytevalue2;</span><br><span class="line">longvalue2 = uintvalue;</span><br><span class="line">longvalue2 = ushortvalue2;</span><br></pre></td></tr></table></figure>
+<h4 id="浮点数与整数（有符号、无符号）之间"><a href="#浮点数与整数（有符号、无符号）之间" class="headerlink" title="浮点数与整数（有符号、无符号）之间"></a>浮点数与整数（有符号、无符号）之间</h4><ul>
+<li>浮点数装整数 整形转为浮点数 是存在隐式转换的</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> floatvalue2 = <span class="number">1.1f</span>;</span><br><span class="line"><span class="built_in">double</span> doublevalue2 = <span class="number">1.1</span>;</span><br><span class="line"><span class="built_in">decimal</span> decimalvalue2 = <span class="number">1.1</span>m;</span><br><span class="line"></span><br><span class="line"><span class="comment">//浮点数 是可以装载任何类型的 整数的</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//float</span></span><br><span class="line">floatvalue2 = longvalue2;</span><br><span class="line">floatvalue2 = intvalue2;</span><br><span class="line">floatvalue2 = shortvalue2;</span><br><span class="line">floatvalue2 = sbytevalue2;</span><br><span class="line"></span><br><span class="line">floatvalue2 = ulongvalue2;</span><br><span class="line">floatvalue2 = uintvalue2;</span><br><span class="line">floatvalue2 = ushortvalue2;</span><br><span class="line">floatvalue2 = bytevalue2;</span><br><span class="line"></span><br><span class="line">floatvalue2 = <span class="number">10000000000000000000</span>;</span><br><span class="line">Console.WriteLine(floatvalue2);<span class="comment">//1E+19</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//double</span></span><br><span class="line">doublevalue2 = longvalue2;</span><br><span class="line">doublevalue2 = intvalue2;</span><br><span class="line">doublevalue2 = shortvalue2;</span><br><span class="line">doublevalue2 = sbytevalue2;</span><br><span class="line"></span><br><span class="line">doublevalue2 = ulongvalue2;</span><br><span class="line">doublevalue2 = uintvalue2;</span><br><span class="line">doublevalue2 = ushortvalue2;</span><br><span class="line">doublevalue2 = bytevalue2;</span><br><span class="line"></span><br><span class="line">doublevalue2 = <span class="number">10000000000000000000</span>;</span><br><span class="line">Console.WriteLine(doublevalue2);<span class="comment">//1E+19</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//decimal 不能隐式存储 float和double</span></span><br><span class="line"><span class="comment">//但是它可以隐式的存储整形</span></span><br><span class="line">decimalvalue2 = longvalue2;</span><br><span class="line">decimalvalue2 = ulongvalue2;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>double ——&gt; float ——&gt; 所有整形（无符号、有符号）</p>
+</li>
+<li><p>decimal ——&gt; 所有整形（无符号、有符号）</p>
+</li>
+<li><p>整数装浮点数</p>
+</li>
+<li><p>整数是不能隐式存储 浮点数  因为 整数 不能存小数</p>
+</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//intValue2 = floatValue2;     //报错</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="特殊类型和其它类型之间"><a href="#特殊类型和其它类型之间" class="headerlink" title="特殊类型和其它类型之间"></a>特殊类型和其它类型之间</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bool</span> boolvalue2 = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">char</span> charvalue2 = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line"><span class="built_in">string</span> stringvalue2 = <span class="string">&quot;1231&quot;</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>bool 类型 没有办法和其它类型 相互隐式转换</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//boolvalue2 = intvalue2;</span></span><br><span class="line"><span class="comment">//boolvalue2 = uintvalue2;</span></span><br><span class="line"><span class="comment">//boolvalue2 = floatvalue2;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//intvalue2 = boolvalue2;</span></span><br><span class="line"><span class="comment">//uintvalue2 = boolvalue2;</span></span><br><span class="line"><span class="comment">//floatvalue2 = boolvalue2;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//boolvalue2 = charvalue2;</span></span><br><span class="line"><span class="comment">//charvalue2 = boolvalue2;</span></span><br><span class="line"><span class="comment">//boolvalue2 = stringvalue2;</span></span><br><span class="line"><span class="comment">//stringvalue2 = boolvalue2;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>char 类型 没有办法隐式的存储 其它类型的变量</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//charvalue2 = intvalue2;</span></span><br><span class="line"><span class="comment">//charvalue2 = floatvalue2;</span></span><br><span class="line"><span class="comment">//charvalue2 = uintvalue2;</span></span><br><span class="line"><span class="comment">//charvalue2 = stringvalue2;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//char类型 可以隐式的转换成 整形和浮点型</span></span><br><span class="line"><span class="comment">//其实是转为int类型</span></span><br><span class="line"><span class="comment">//然后int类型又隐式转换为其他可以转换的类型</span></span><br><span class="line"><span class="comment">//所以对于short和byte等这种存储范围小于int的类型</span></span><br><span class="line"><span class="comment">//无法表现为隐式转换</span></span><br><span class="line"><span class="comment">//char隐式转换成 数值类型是 </span></span><br><span class="line"><span class="comment">//对应的数字 其实是一个 ASCII码 </span></span><br><span class="line"><span class="comment">// 计算机里面存储 2进制</span></span><br><span class="line"><span class="comment">// 字符 中文 英文 标点符号 在计算机中都是一个数字</span></span><br><span class="line"><span class="comment">// 一个字符 对应一个数字 ASCII码就是一种对应关系</span></span><br><span class="line">intvalue2 = charvalue2;</span><br><span class="line">Console.WriteLine(intvalue2);<span class="comment">// 65 因为charvalue2赋值为A A的ASCII码是65</span></span><br><span class="line">floatvalue2 = charvalue2;</span><br><span class="line">Console.WriteLine(floatvalue2);<span class="comment">// 65 因为charvalue2赋值为A A的ASCII码是65</span></span><br><span class="line">uintvalue2 = charvalue2;</span><br><span class="line">Console.WriteLine(uintvalue2);<span class="comment">// 65 因为charvalue2赋值为A A的ASCII码是65</span></span><br><span class="line">decimalvalue2 = charvalue2;</span><br><span class="line">Console.WriteLine(uintvalue2);<span class="comment">// 65 因为charvalue2赋值为A A的ASCII码是65</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//string 类型 无法和其它类型进行隐式转换</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//stringvalue2 = charvalue2;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//intvalue2 = stringvalue2;</span></span><br><span class="line"><span class="comment">//uintvalue2 = stringvalue2;</span></span><br><span class="line"><span class="comment">//floatvalue2 = stringvalue2;</span></span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>隐式转换 规则</li>
+<li>高精度（大范围）装低精度（小范围）</li>
+<li>double ——&gt; float ——&gt; 整数（无符号、有符号）——&gt;char</li>
+<li>decimal ——&gt; 整数（无符号、有符号）——&gt;char</li>
+<li>string 和 bool 不参与隐式转换规则的</li>
+</ul>
+<h2 id="显示转换"><a href="#显示转换" class="headerlink" title="显示转换"></a>显示转换</h2><ul>
+<li>显示转换其实就是手动处理，强制转换类型。</li>
+<li>括号强转</li>
+<li>作用：一般情况下，将高精度的类型强制转换为低精度</li>
+<li>语法：变量类型 变量名&#x3D; （变量类型）变量；</li>
+<li>注意：精度问题、范围问题</li>
+</ul>
+<h3 id="相同大类的整形的转换"><a href="#相同大类的整形的转换" class="headerlink" title="相同大类的整形的转换"></a>相同大类的整形的转换</h3><h4 id="有符号整形"><a href="#有符号整形" class="headerlink" title="有符号整形"></a>有符号整形</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> intvalue = <span class="number">1000</span>;</span><br><span class="line"><span class="built_in">short</span> shortvalue = <span class="number">-10000</span>;</span><br><span class="line"><span class="built_in">sbyte</span> sbytevalue = <span class="number">127</span>;</span><br><span class="line"><span class="built_in">long</span> longvalue = <span class="number">10000</span>;</span><br><span class="line">sbytevalue = (<span class="built_in">sbyte</span>)shortvalue;<span class="comment">//括号强转 可能会出现范围问题 造成的异常</span></span><br><span class="line">Console.WriteLine(<span class="string">&quot;sbytevalue:&quot;</span> + sbytevalue);<span class="comment">//打印结果：-16</span></span><br><span class="line">shortvalue = (<span class="built_in">short</span>)intvalue;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;shortvalue:&quot;</span> + shortvalue);</span><br><span class="line">shortvalue = (<span class="built_in">short</span>)longvalue;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;shortvalue:&quot;</span> + shortvalue);</span><br><span class="line">intvalue = (<span class="built_in">int</span>)longvalue;</span><br><span class="line">Console.WriteLine(<span class="string">&quot;intvalue:&quot;</span> + intvalue);</span><br></pre></td></tr></table></figure>
+<h4 id="无符号整形"><a href="#无符号整形" class="headerlink" title="无符号整形"></a>无符号整形</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">uint</span> uintvalue = <span class="number">100</span>;</span><br><span class="line">          <span class="built_in">byte</span> bytevalue = <span class="number">255</span>;</span><br><span class="line">          <span class="built_in">ulong</span> ulongvalue = <span class="number">4000</span>;</span><br><span class="line">          <span class="built_in">ushort</span> ushortvalue = <span class="number">5000</span>;</span><br><span class="line"></span><br><span class="line">          bytevalue = (<span class="built_in">byte</span>)uintvalue;</span><br><span class="line">          Console.WriteLine(bytevalue);</span><br></pre></td></tr></table></figure>
+<h4 id="浮点数之间"><a href="#浮点数之间" class="headerlink" title="浮点数之间"></a>浮点数之间</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> floatValue = <span class="number">1.1f</span>;</span><br><span class="line">         <span class="built_in">double</span> doubleValue = <span class="number">1.1234567890123456789f</span>;</span><br><span class="line"></span><br><span class="line">         floatValue = (<span class="built_in">float</span>)doubleValue; <span class="comment">// 会只保留float的精度，舍弃double后面的精度</span></span><br><span class="line">         Console.WriteLine(floatValue); <span class="comment">// 1.1234568</span></span><br><span class="line">         <span class="meta">#<span class="keyword">endregion</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="不同类型的转换"><a href="#不同类型的转换" class="headerlink" title="不同类型的转换"></a>不同类型的转换</h3><h4 id="有符号和无符号"><a href="#有符号和无符号" class="headerlink" title="有符号和无符号"></a>有符号和无符号</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> intvalue2 = <span class="number">-1</span>;</span><br><span class="line">       <span class="built_in">uint</span> uintvalue2 = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">       uintvalue2 = (<span class="built_in">uint</span>)intvalue2;<span class="comment">// 在强转时一定要注意范围，不然得到的结果可能有异常</span></span><br><span class="line">       Console.WriteLine(<span class="string">&quot;uintvalue2:&quot;</span> + uintvalue2);<span class="comment">//4294967295</span></span><br><span class="line">       intvalue2 = <span class="number">100</span>;</span><br><span class="line">       uintvalue2 = (<span class="built_in">uint</span>)intvalue2;</span><br><span class="line">       Console.WriteLine(<span class="string">&quot;uintvalue2:&quot;</span> + uintvalue2);<span class="comment">//100</span></span><br></pre></td></tr></table></figure>
+<h4 id="浮点和整形"><a href="#浮点和整形" class="headerlink" title="浮点和整形"></a>浮点和整形</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 浮点和整形</span></span><br><span class="line">          <span class="comment">// 浮点数强转成整形时，会直接抛弃掉小数点后面的小数，不会四舍五入</span></span><br><span class="line">          intvalue2 = (<span class="built_in">int</span>)<span class="number">1.8555f</span>;</span><br><span class="line">          Console.WriteLine(<span class="string">&quot;intvalue2:&quot;</span> + intvalue2);<span class="comment">//打印结果：1</span></span><br></pre></td></tr></table></figure>
+<h4 id="char和数值类型"><a href="#char和数值类型" class="headerlink" title="char和数值类型"></a>char和数值类型</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">intvalue2 = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">           <span class="built_in">char</span> charvalue = (<span class="built_in">char</span>)intvalue2;</span><br><span class="line">           Console.WriteLine(<span class="string">&quot;charvalue:&quot;</span> + charvalue);</span><br></pre></td></tr></table></figure>
+<h4 id="bool和string是不能够通过括号强转的。"><a href="#bool和string是不能够通过括号强转的。" class="headerlink" title="bool和string是不能够通过括号强转的。"></a>bool和string是不能够通过括号强转的。</h4><h3 id="Parse字符串转对应类型"><a href="#Parse字符串转对应类型" class="headerlink" title="Parse字符串转对应类型"></a>Parse字符串转对应类型</h3><ul>
+<li>作用  把字符串类型转换为对应的类型</li>
+<li>语法： 变量类型.Parse(“字符串”)</li>
+<li>注意： 字符串必须能够转换成对应类型 否则报错</li>
+</ul>
+<h4 id="Parse法的转换规则"><a href="#Parse法的转换规则" class="headerlink" title="Parse法的转换规则"></a>Parse法的转换规则</h4><ul>
+<li>我们填写字符串 必须是要能够转成对应类型的字符 如果不符合规则 会报错</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> intValue3 = <span class="built_in">int</span>.Parse(<span class="string">&quot;123.45&quot;</span>);<span class="comment">//报错 转换失败</span></span><br><span class="line">Console.WriteLine(intValue3);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>值的范围 必须是能够被变量存储的值 否则报错</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">short</span> shortValue2 = <span class="built_in">short</span>.Parse(<span class="string">&quot;40000&quot;</span>);</span><br><span class="line">Console.WriteLine(shortValue2);</span><br></pre></td></tr></table></figure>
+<h4 id="Parse法把字符串转换为对应的类型"><a href="#Parse法把字符串转换为对应的类型" class="headerlink" title="Parse法把字符串转换为对应的类型"></a>Parse法把字符串转换为对应的类型</h4><ul>
+<li>有符号：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> stringValue3 = <span class="string">&quot;123&quot;</span>;</span><br><span class="line">          <span class="built_in">int</span> intValue4 = <span class="number">123</span>;</span><br><span class="line">          <span class="comment">//intValue4 = int.Parse(stringValue3);</span></span><br><span class="line">          <span class="comment">//可以直接传 不用传变量 填写的字符串符合规则 可以转换</span></span><br><span class="line">          intValue4 = <span class="built_in">int</span>.Parse(<span class="string">&quot;123&quot;</span>);</span><br><span class="line">          Console.WriteLine(intValue4);<span class="comment">//123;</span></span><br><span class="line">          <span class="built_in">sbyte</span> sbyteValue3 = <span class="built_in">sbyte</span>.Parse(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">          Console.WriteLine(sbyteValue3);<span class="comment">//1</span></span><br><span class="line">          <span class="comment">//他们的意思是相同的 </span></span><br><span class="line">          Console.WriteLine(<span class="built_in">sbyte</span>.Parse(<span class="string">&quot;1&quot;</span>));<span class="comment">//1</span></span><br><span class="line">          Console.WriteLine(<span class="built_in">long</span>.Parse(<span class="string">&quot;123123&quot;</span>));<span class="comment">//123123</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>无符号：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(<span class="built_in">byte</span>.Parse(<span class="string">&quot;1&quot;</span>));<span class="comment">//1</span></span><br><span class="line">           Console.WriteLine(<span class="built_in">ushort</span>.Parse(<span class="string">&quot;1&quot;</span>));<span class="comment">//1</span></span><br><span class="line">           Console.WriteLine(<span class="built_in">ulong</span>.Parse(<span class="string">&quot;1&quot;</span>));<span class="comment">//1</span></span><br><span class="line">           Console.WriteLine(<span class="built_in">uint</span>.Parse(<span class="string">&quot;1&quot;</span>));<span class="comment">//1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>浮点数：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">float</span> floatValue3 = <span class="built_in">float</span>.Parse(<span class="string">&quot;1.2323&quot;</span>);</span><br><span class="line">          <span class="built_in">double</span> doubleValue3 = <span class="built_in">double</span>.Parse(<span class="string">&quot;1.2323&quot;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>特殊类型：</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bool</span> boolValue2 = <span class="built_in">bool</span>.Parse(<span class="string">&quot;true&quot;</span>);</span><br><span class="line">          Console.WriteLine(boolValue2);<span class="comment">//True</span></span><br><span class="line">          <span class="built_in">char</span> charValue2 = <span class="built_in">char</span>.Parse(<span class="string">&quot;A&quot;</span>);</span><br><span class="line">          Console.WriteLine(charValue2);<span class="comment">//A</span></span><br><span class="line">                                        <span class="comment">//没有string.Parse这个方法 没有必要 直接赋值就行</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Convert法"><a href="#Convert法" class="headerlink" title="Convert法"></a>Convert法</h3><ul>
+<li>作用  更准确的将 各个类型之间进行相互转换 </li>
+<li>语法： Convert.To目标类型(变量或常量)</li>
+<li>注意： 填写的变量或常量必须正确 否则出错</li>
+</ul>
+<h4 id="转字符串"><a href="#转字符串" class="headerlink" title="转字符串"></a>转字符串</h4><ul>
+<li>如果是把字符串转对应类型 那字符串一定要合法合规</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a = Convert.ToInt32(<span class="string">&quot;12&quot;</span>);</span><br><span class="line">Console.WriteLine(a);<span class="comment">//12</span></span><br></pre></td></tr></table></figure>
+<h4 id="转浮点数"><a href="#转浮点数" class="headerlink" title="转浮点数"></a>转浮点数</h4><ul>
+<li>精度更准确</li>
+<li>精度比括号强转好一点 会四舍五入</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = Convert.ToInt32(<span class="number">1.45845f</span>);</span><br><span class="line">Console.WriteLine(a);<span class="comment">//1</span></span><br></pre></td></tr></table></figure>
+<h4 id="转特殊类型"><a href="#转特殊类型" class="headerlink" title="转特殊类型"></a>转特殊类型</h4><ul>
+<li>把bool类型也可以转成 数值类型 true对应1 false对应0</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = Convert.ToInt32(<span class="literal">true</span>);</span><br><span class="line">        Console.WriteLine(a);<span class="comment">//1</span></span><br><span class="line">        a = Convert.ToInt32(<span class="literal">false</span>);</span><br><span class="line">        Console.WriteLine(a);<span class="comment">//0</span></span><br><span class="line">        a = Convert.ToInt32(<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">        Console.WriteLine(a);<span class="comment">//65</span></span><br></pre></td></tr></table></figure>
+<h4 id="每一个类型都存在对应的-Convert中的方法"><a href="#每一个类型都存在对应的-Convert中的方法" class="headerlink" title="每一个类型都存在对应的 Convert中的方法"></a>每一个类型都存在对应的 Convert中的方法</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sbyte</span> sbyteValue5 = Convert.ToSByte(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">           <span class="built_in">short</span> shortValue5 = Convert.ToInt16(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">           <span class="built_in">int</span> intValue5 = Convert.ToInt32(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">           <span class="built_in">long</span> longValue5 = Convert.ToInt64(<span class="string">&quot;1&quot;</span>);</span><br><span class="line"></span><br><span class="line">           <span class="built_in">byte</span> byteValue5 = Convert.ToByte(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">           <span class="built_in">ushort</span> ushortValue5 = Convert.ToUInt16(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">           <span class="built_in">uint</span> uintValue5 = Convert.ToUInt32(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">           <span class="built_in">ulong</span> ulongValue5 = Convert.ToUInt64(<span class="string">&quot;1&quot;</span>);</span><br><span class="line"></span><br><span class="line">           <span class="built_in">float</span> floatValue5 = Convert.ToSingle(<span class="string">&quot;13.2&quot;</span>);</span><br><span class="line">           <span class="built_in">double</span> doubleValue5 = Convert.ToDouble(<span class="string">&quot;13.2&quot;</span>);</span><br><span class="line">           <span class="built_in">decimal</span> decimalValue5 = Convert.ToDecimal(<span class="string">&quot;13.2&quot;</span>);</span><br><span class="line"></span><br><span class="line">           <span class="built_in">bool</span> boolValue5 = Convert.ToBoolean(<span class="string">&quot;true&quot;</span>);</span><br><span class="line">           <span class="built_in">char</span> charValue5 = Convert.ToChar(<span class="string">&quot;A&quot;</span>);</span><br><span class="line"></span><br><span class="line">           <span class="built_in">string</span> stringValue5 = Convert.ToString(<span class="number">123123</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="其他类型转string"><a href="#其他类型转string" class="headerlink" title="其他类型转string"></a>其他类型转string</h3><span id="more"></span>
+<ul>
+<li>作用：拼接打印</li>
+<li>语法：变量.toString();</li>
+</ul>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> stringValue6 = <span class="number">1.</span>ToString();</span><br><span class="line">         stringValue6 = <span class="literal">true</span>.ToString();</span><br><span class="line">         stringValue6 = <span class="string">&#x27;A&#x27;</span>.ToString();</span><br><span class="line">         stringValue6 = <span class="number">1.2f</span>.ToString();</span><br><span class="line"></span><br><span class="line">         <span class="built_in">int</span> aa = <span class="number">1</span>;</span><br><span class="line">         stringValue6 = aa.ToString();</span><br><span class="line">         <span class="built_in">bool</span> bo6 = <span class="literal">true</span>;</span><br><span class="line">         stringValue6 = bo6.ToString();</span><br><span class="line"></span><br><span class="line">         <span class="comment">//当我们进行字符串拼接时 就自动会调用 tostring 转成string</span></span><br><span class="line">         Console.WriteLine(<span class="string">&quot;123123&quot;</span> + <span class="number">1</span> + <span class="literal">true</span>);<span class="comment">//1231231True</span></span><br><span class="line"></span><br><span class="line">         stringValue6 = <span class="string">&quot;123123&quot;</span> + <span class="number">1</span> + <span class="literal">true</span> + <span class="number">1.23</span>;</span><br><span class="line">         Console.WriteLine(stringValue6);<span class="comment">//1231231True1.23</span></span><br></pre></td></tr></table></figure>
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/L_Study.github.io/2025/02/06/C-%E5%9F%BA%E7%A1%80/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/L_Study.github.io/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /L_Study.github.io/categories/Csharp/">
+                    Csharp
+                </a>
+            </div>
+            <h5>
+                <a href="/L_Study.github.io/2025/02/06/C-%E5%9F%BA%E7%A1%80/" class="trm-anima-link">
+                    C#基础
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>25/02/06</li>
+                <li>08:57</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/L_Study.github.io/2025/01/06/hello-world/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/L_Study.github.io/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/L_Study.github.io/2025/01/06/hello-world/" class="trm-anima-link">
+                    Hello World
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>25/01/06</li>
+                <li>22:41</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.4
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        目录导航
+				<span id="post-toc-top">
+					置顶
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-1" title="语法知识"><a rel="nofollow" class="trm-toc-link" href="#语法知识"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">语法知识</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-2" title="脚本结构和基本语法"><a rel="nofollow" class="trm-toc-link" href="#脚本结构和基本语法"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">脚本结构和基本语法</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="脚本结构"><a rel="nofollow" class="trm-toc-link" href="#脚本结构"><span class="trm-toc-number">1.1.1.</span> <span class="trm-toc-text">脚本结构</span></a></li><li class="trm-toc-item trm-toc-level-3" title="注释"><a rel="nofollow" class="trm-toc-link" href="#注释"><span class="trm-toc-number">1.1.2.</span> <span class="trm-toc-text">注释</span></a></li><li class="trm-toc-item trm-toc-level-3" title="打印方法"><a rel="nofollow" class="trm-toc-link" href="#打印方法"><span class="trm-toc-number">1.1.3.</span> <span class="trm-toc-text">打印方法</span></a></li><li class="trm-toc-item trm-toc-level-3" title="输入（向控制台输入内容）"><a rel="nofollow" class="trm-toc-link" href="#输入（向控制台输入内容）"><span class="trm-toc-number">1.1.4.</span> <span class="trm-toc-text">输入（向控制台输入内容）</span></a></li><li class="trm-toc-item trm-toc-level-3" title="输出（在控制台打印信息）"><a rel="nofollow" class="trm-toc-link" href="#输出（在控制台打印信息）"><span class="trm-toc-number">1.1.5.</span> <span class="trm-toc-text">输出（在控制台打印信息）</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="变量"><a rel="nofollow" class="trm-toc-link" href="#变量"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">变量</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="折叠代码："><a rel="nofollow" class="trm-toc-link" href="#折叠代码："><span class="trm-toc-number">1.2.1.</span> <span class="trm-toc-text">折叠代码：</span></a></li><li class="trm-toc-item trm-toc-level-3" title="如何声明变量:"><a rel="nofollow" class="trm-toc-link" href="#如何声明变量"><span class="trm-toc-number">1.2.2.</span> <span class="trm-toc-text">如何声明变量:</span></a></li><li class="trm-toc-item trm-toc-level-3" title="C#中14种不同的变量类型"><a rel="nofollow" class="trm-toc-link" href="#C-中14种不同的变量类型"><span class="trm-toc-number">1.2.3.</span> <span class="trm-toc-text">C#中14种不同的变量类型</span></a></li><li class="trm-toc-item trm-toc-level-3" title="为什么有那么多不同类型的变量"><a rel="nofollow" class="trm-toc-link" href="#为什么有那么多不同类型的变量"><span class="trm-toc-number">1.2.4.</span> <span class="trm-toc-text">为什么有那么多不同类型的变量</span></a></li><li class="trm-toc-item trm-toc-level-3" title="多个相同类型的变量同时声明"><a rel="nofollow" class="trm-toc-link" href="#多个相同类型的变量同时声明"><span class="trm-toc-number">1.2.5.</span> <span class="trm-toc-text">多个相同类型的变量同时声明</span></a></li><li class="trm-toc-item trm-toc-level-3" title="变量初始化相关"><a rel="nofollow" class="trm-toc-link" href="#变量初始化相关"><span class="trm-toc-number">1.2.6.</span> <span class="trm-toc-text">变量初始化相关</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="变量的本质"><a rel="nofollow" class="trm-toc-link" href="#变量的本质"><span class="trm-toc-number">1.3.</span> <span class="trm-toc-text">变量的本质</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="变量类型回顾"><a rel="nofollow" class="trm-toc-link" href="#变量类型回顾"><span class="trm-toc-number">1.3.1.</span> <span class="trm-toc-text">变量类型回顾</span></a></li><li class="trm-toc-item trm-toc-level-3" title="变量的储存空间"><a rel="nofollow" class="trm-toc-link" href="#变量的储存空间"><span class="trm-toc-number">1.3.2.</span> <span class="trm-toc-text">变量的储存空间</span></a></li><li class="trm-toc-item trm-toc-level-3" title="变量的本质是2进制"><a rel="nofollow" class="trm-toc-link" href="#变量的本质是2进制"><span class="trm-toc-number">1.3.3.</span> <span class="trm-toc-text">变量的本质是2进制</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="变量的命名规范"><a rel="nofollow" class="trm-toc-link" href="#变量的命名规范"><span class="trm-toc-number">1.4.</span> <span class="trm-toc-text">变量的命名规范</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="变量的命名必须遵守的规则"><a rel="nofollow" class="trm-toc-link" href="#变量的命名必须遵守的规则"><span class="trm-toc-number">1.4.1.</span> <span class="trm-toc-text">变量的命名必须遵守的规则</span></a></li><li class="trm-toc-item trm-toc-level-3" title="命名规则建议"><a rel="nofollow" class="trm-toc-link" href="#命名规则建议"><span class="trm-toc-number">1.4.2.</span> <span class="trm-toc-text">命名规则建议</span></a></li><li class="trm-toc-item trm-toc-level-3" title="变量常用命名规范"><a rel="nofollow" class="trm-toc-link" href="#变量常用命名规范"><span class="trm-toc-number">1.4.3.</span> <span class="trm-toc-text">变量常用命名规范</span></a></li><li class="trm-toc-item trm-toc-level-3" title="潜在知识点"><a rel="nofollow" class="trm-toc-link" href="#潜在知识点"><span class="trm-toc-number">1.4.4.</span> <span class="trm-toc-text">潜在知识点</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="常量"><a rel="nofollow" class="trm-toc-link" href="#常量"><span class="trm-toc-number">1.5.</span> <span class="trm-toc-text">常量</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="基础语法"><a rel="nofollow" class="trm-toc-link" href="#基础语法"><span class="trm-toc-number">1.5.1.</span> <span class="trm-toc-text">基础语法</span></a></li><li class="trm-toc-item trm-toc-level-3" title="常量的特点"><a rel="nofollow" class="trm-toc-link" href="#常量的特点"><span class="trm-toc-number">1.5.2.</span> <span class="trm-toc-text">常量的特点</span></a></li><li class="trm-toc-item trm-toc-level-3" title="常量的作用"><a rel="nofollow" class="trm-toc-link" href="#常量的作用"><span class="trm-toc-number">1.5.3.</span> <span class="trm-toc-text">常量的作用</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="转义字符"><a rel="nofollow" class="trm-toc-link" href="#转义字符"><span class="trm-toc-number">1.6.</span> <span class="trm-toc-text">转义字符</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="转义字符的使用"><a rel="nofollow" class="trm-toc-link" href="#转义字符的使用"><span class="trm-toc-number">1.6.1.</span> <span class="trm-toc-text">转义字符的使用</span></a></li><li class="trm-toc-item trm-toc-level-3" title="什么是转义字符?"><a rel="nofollow" class="trm-toc-link" href="#什么是转义字符"><span class="trm-toc-number">1.6.2.</span> <span class="trm-toc-text">什么是转义字符?</span></a></li><li class="trm-toc-item trm-toc-level-3" title="常用的转义字符"><a rel="nofollow" class="trm-toc-link" href="#常用的转义字符"><span class="trm-toc-number">1.6.3.</span> <span class="trm-toc-text">常用的转义字符</span></a></li><li class="trm-toc-item trm-toc-level-3" title="不常用转义字符（了解）"><a rel="nofollow" class="trm-toc-link" href="#不常用转义字符（了解）"><span class="trm-toc-number">1.6.4.</span> <span class="trm-toc-text">不常用转义字符（了解）</span></a></li><li class="trm-toc-item trm-toc-level-3" title="取消转义字符"><a rel="nofollow" class="trm-toc-link" href="#取消转义字符"><span class="trm-toc-number">1.6.5.</span> <span class="trm-toc-text">取消转义字符</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="隐式转换"><a rel="nofollow" class="trm-toc-link" href="#隐式转换"><span class="trm-toc-number">1.7.</span> <span class="trm-toc-text">隐式转换</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="什么是类型转换"><a rel="nofollow" class="trm-toc-link" href="#什么是类型转换"><span class="trm-toc-number">1.7.1.</span> <span class="trm-toc-text">什么是类型转换</span></a></li><li class="trm-toc-item trm-toc-level-3" title="相同的类型之间的转换"><a rel="nofollow" class="trm-toc-link" href="#相同的类型之间的转换"><span class="trm-toc-number">1.7.2.</span> <span class="trm-toc-text">相同的类型之间的转换</span></a></li><li class="trm-toc-item trm-toc-level-3" title="不同的类型之间的转换"><a rel="nofollow" class="trm-toc-link" href="#不同的类型之间的转换"><span class="trm-toc-number">1.7.3.</span> <span class="trm-toc-text">不同的类型之间的转换</span></a></li><li class="trm-toc-item trm-toc-level-3" title="总结"><a rel="nofollow" class="trm-toc-link" href="#总结"><span class="trm-toc-number">1.7.4.</span> <span class="trm-toc-text">总结</span></a></li></ol></li><li class="trm-toc-item trm-toc-level-2" title="显示转换"><a rel="nofollow" class="trm-toc-link" href="#显示转换"><span class="trm-toc-number">1.8.</span> <span class="trm-toc-text">显示转换</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="相同大类的整形的转换"><a rel="nofollow" class="trm-toc-link" href="#相同大类的整形的转换"><span class="trm-toc-number">1.8.1.</span> <span class="trm-toc-text">相同大类的整形的转换</span></a></li><li class="trm-toc-item trm-toc-level-3" title="不同类型的转换"><a rel="nofollow" class="trm-toc-link" href="#不同类型的转换"><span class="trm-toc-number">1.8.2.</span> <span class="trm-toc-text">不同类型的转换</span></a></li><li class="trm-toc-item trm-toc-level-3" title="Parse字符串转对应类型"><a rel="nofollow" class="trm-toc-link" href="#Parse字符串转对应类型"><span class="trm-toc-number">1.8.3.</span> <span class="trm-toc-text">Parse字符串转对应类型</span></a></li><li class="trm-toc-item trm-toc-level-3" title="Convert法"><a rel="nofollow" class="trm-toc-link" href="#Convert法"><span class="trm-toc-number">1.8.4.</span> <span class="trm-toc-text">Convert法</span></a></li><li class="trm-toc-item trm-toc-level-3" title="其他类型转string"><a rel="nofollow" class="trm-toc-link" href="#其他类型转string"><span class="trm-toc-number">1.8.5.</span> <span class="trm-toc-text">其他类型转string</span></a></li></ol></li></ol></li></ol>
+      </div>
+    </div>
+
+            
+<div class="trm-fixed-container">
+    
+        <div class="trm-fixed-btn post-toc-btn" data-title="目录">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn hidden-md" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
+            <i class="iconfont fas fa-arrows-alt-h"></i>
+        </div>
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+        <script src="/L_Study.github.io/js/plugins/typing.js?v=2.2.4"></script>
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/L_Study.github.io/js/main.js?v=2.2.4"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+</body>
+
+</html>
